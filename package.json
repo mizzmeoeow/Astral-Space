@@ -9,6 +9,8 @@
   "author": "Shanna",
   "license": "MIT",
   "dependencies": {
+    "client": "^0.0.1",
+    "create-react-app": "^4.0.3",
     "express": "^4.17.1",
     "password-generator": "^2.3.2"
   }
