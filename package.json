@@ -1,0 +1,11 @@
+{
+  "name": "astralspace",
+  "version": "1.0.0",
+  "description": "a blog application with potential",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Shanna",
+  "license": "MIT"
+}
