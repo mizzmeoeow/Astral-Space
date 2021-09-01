@@ -16,7 +16,7 @@ const Image = require("./dbSchema/models/image");
 const config = require("./config/keys");
 const jwt = require("jsonwebtoken");
 const corsOptions = {
-  origin: "https://astralspace.herokuapp.com/",
+  origin: "https://astralspace.herokuapp.com:3000",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, "client/public")));
+app.use("/static", express.static(path.join(__dirname, "client/public")));
 
 app.get("/api/passwords", (req, res) => {
   const count = 5;
