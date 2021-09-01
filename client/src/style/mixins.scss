@@ -1,0 +1,34 @@
+@mixin layout {
+  // display: flex;
+
+  color: #b535fc;
+  font-family: "Tangerine", cursive;
+  background-color: $header;
+}
+
+@mixin footer {
+  margin-left: 150px;
+  font-size: 25px;
+  display: inline;
+  color: #b535fc;
+}
+
+@mixin layoutheader {
+  display: flex;
+  overflow-x: hidden;
+
+  p {
+    grid-row: p-s/p-e;
+    transform: translateX(200px);
+    @media (max-width: 615px) {
+      transform: translateX(20px);
+    }
+  }
+}
+
+@mixin connect-footer {
+  margin-left: 150px;
+  font-size: 25px;
+  display: inline;
+  font-family: "Tangerine", cursive;
+}

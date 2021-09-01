@@ -1,58 +1,127 @@
 import React, { Component } from "react";
-import "./App.css";
+import { Route, Switch, Link } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+import setAuthToken from "./utils/setAuthToken";
 
-class App extends Component {
-  // Initialize state
-  state = { passwords: [] };
+import { setCurrentUser, logoutUser } from "./actions/actionAuth";
 
-  // Fetch passwords after first mount
-  componentDidMount() {
-    this.getPasswords();
+import Layout from "./components/layout";
+import LandingPage from "./components/pages/landingPage";
+import Contact from "./components/pages/contact";
+import Dashboard from "./components/pages/dashboard";
+import Register from "./components/auth/register/register";
+import SignIn from "./components/auth/sign-in/sign-in";
+import PrivateRoute from "./privateRoute/privateRoute";
+import Unsuccess from "./components/auth/login/formUnSuccess";
+import Shop from "./components/pages/shop";
+import Connect from "./components/pages/connect";
+// import Blog from "./components/pages/blog";
+import Literature from "./components/categories/pages/literature";
+import Architecture from "./components/categories/pages/architecture";
+import Cinema from "./components/categories/pages/cinema";
+import GraphicDesign from "./components/categories/pages/graphicDesign";
+import Music from "./components/categories/pages/music";
+import Painting from "./components/categories/pages/painting";
+import PerformingArts from "./components/categories/pages/performing";
+import Sculpting from "./components/categories/pages/sculpting";
+
+import { Provider } from "react-redux";
+import store from "./store";
+// import Settings from "./components/categories/pages/settings/settings";
+import Single from "./components/categories/pages/single/single";
+
+if (sessionStorage.jwtToken != null) {
+  // Set auth token header auth
+  const token = sessionStorage.jwtToken;
+  setAuthToken(token);
+  // Decode token and get user info and exp
+  const decoded = jwt_decode(token);
+
+  sessionStorage.setItem("user", JSON.stringify(decoded));
+  sessionStorage.setItem("userData", JSON.stringify(token));
+
+  // Set user and isAuthenticated
+  store.dispatch(setCurrentUser(decoded));
+  // Check for expired token
+  const currentTime = Date.now() / 1000; // to get in milliseconds
+  if (decoded.exp < currentTime) {
+    // Logout user
+    store.dispatch(logoutUser());
+
+    // Redirect to login
+    window.location.href = "./login";
+  }
+}
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentUser: null,
+    };
   }
 
-  getPasswords = () => {
-    // Get the passwords and store them in state
-    fetch("/api/passwords")
-      .then((res) => res.json())
-      .then((passwords) => this.setState({ passwords }));
-  };
-
   render() {
-    const { passwords } = this.state;
-
+    const { currentUser } = this.state;
+    const { user } = this.state;
     return (
-      <div className="App">
-        {/* Render the passwords if we have them */}
-        {passwords.length ? (
-          <div>
-            <h1>5 Passwords.</h1>
-            <ul className="passwords">
-              {/*
-                Generally it's bad to use "index" as a key.
-                It's ok for this example because there will always
-                be the same number of passwords, and they never
-                change positions in the array.
-              */}
-              {passwords.map((password, index) => (
-                <li key={index}>{password}</li>
-              ))}
-            </ul>
-            <button className="more" onClick={this.getPasswords}>
-              Get More
-            </button>
-          </div>
-        ) : (
-          // Render a helpful message otherwise
-          <div>
-            <h1>No passwords :(</h1>
-            <button className="more" onClick={this.getPasswords}>
-              Try Again?
-            </button>
-          </div>
-        )}
+      <div className="container">
+        <div>
+          {currentUser && <Link to="/dashboard">HomeSpace</Link>}
+          <Provider store={store}>
+            <Layout>
+              <Route exact path="/" component={LandingPage} />
+              <Route path="/contact" exact component={Contact} />
+              <Route path="/shop" exact component={Shop} />
+              <Route path="/unsuccess" exact component={Unsuccess} />
+
+              <Route
+                path="/login"
+                render={() => <SignIn user={this.props.user} />}
+              />
+              <Route
+                path="/register"
+                render={() => <Register updateUser={this.updateUser} />}
+              />
+              <Switch>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                {/* <PrivateRoute path="/settings" exact component={Settings} /> */}
+                <PrivateRoute
+                  path="/connect"
+                  exact
+                  component={Connect}
+                  user={user}
+                />
+                <PrivateRoute path="/literature" exact component={Literature} />
+
+                <PrivateRoute
+                  path="/architecture"
+                  component={Architecture}
+                  render={() => <Architecture user={user} />}
+                />
+                <PrivateRoute path="/Cinema" exact component={Cinema} />
+                <PrivateRoute
+                  path="/GraphicDesign"
+                  exact
+                  component={GraphicDesign}
+                />
+                <PrivateRoute path="/Music" exact component={Music} />
+                <PrivateRoute path="/Painting" exact component={Painting} />
+                <PrivateRoute
+                  path="/PerformingArts"
+                  exact
+                  component={PerformingArts}
+                />
+                <PrivateRoute path="/Sculpting" exact component={Sculpting} />
+                <Route path="/post/:postId">
+                  <Single />
+                </Route>
+              </Switch>
+            </Layout>
+          </Provider>
+        </div>
       </div>
     );
   }
 }
-
-export default App;

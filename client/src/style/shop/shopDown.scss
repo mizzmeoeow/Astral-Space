@@ -1,0 +1,23 @@
+.shop-down-info {
+  height: 300px;
+  width: 600px;
+  color: black;
+
+  .shop-down {
+    align-items: left;
+    font-size: 40px;
+  }
+
+  .shop-down-sig {
+    font-size: 15px;
+  }
+}
+
+.shop-down-reg {
+  text-decoration: none;
+  color: rgb(100, 6, 88);
+}
+
+.shop-down-reg:hover {
+  color: #b535fc;
+}

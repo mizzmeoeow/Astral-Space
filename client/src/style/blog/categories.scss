@@ -1,0 +1,175 @@
+.category-header {
+  width: 100vw;
+  font-size: 60px;
+  font-family: "Tangerine", cursive;
+  background-color: black;
+  color: white;
+
+  p::first-letter {
+    font-size: 80px;
+  }
+}
+
+.addImage {
+  color: white;
+}
+
+.writeImg {
+  margin-left: 150px;
+  width: 80vw;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  @media (max-width: 615px) {
+    transform: translateX(-100px);
+  }
+}
+
+.writeForm {
+  position: relative;
+}
+
+.writeFormGroup {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 615px) {
+    transform: translateX(-90px);
+  }
+}
+
+.writeIcon {
+  border-radius: 50%;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #b535fc;
+  cursor: pointer;
+  @media (max-width: 615px) {
+    transform: translateX(-17px);
+  }
+}
+
+.writeInput {
+  font-size: 1rem;
+  color: white;
+  border: none;
+  padding: 20px;
+  width: 60vw;
+  background: transparent;
+  border: 2px solid lightgray;
+}
+
+.writeTitle {
+  width: 52vw;
+  border-radius: 10px;
+  color: white;
+  @media (max-width: 615px) {
+    transform: translateX(-17px);
+  }
+}
+
+.writeInput:focus {
+  outline: none;
+}
+
+.writeText {
+  font-size: 1rem;
+  height: 130vh;
+  @media (max-width: 615px) {
+    height: 98vh;
+  }
+}
+
+.writeSubmit {
+  position: absolute;
+  top: 5px;
+  right: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  @media (max-width: 615px) {
+    right: 20px;
+  }
+}
+
+.writeSubmit:hover {
+  background-image: linear-gradient(180deg, rgb(47, 0, 255), rgb(255, 0, 234));
+}
+
+.writeSubmit:active {
+  background-color: #3e8e41;
+  box-shadow: 0 3px transparent;
+  transform: translateY(2px);
+}
+
+.posts {
+  margin: 20px;
+  position: relative;
+}
+
+.post {
+  width: 385px;
+  margin: 0px 25px 40px 25px;
+}
+
+.postImg {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postCat {
+  font-family: "Tangerine", cursive;
+  font-size: 11px;
+  color: #b535fc;
+  line-height: 20px;
+  margin-top: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.postTitle {
+  font-family: "Old Standard TT", serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.cat-link {
+  text-decoration: none;
+}
+
+.postDate {
+  font-family: "Tangerine", cursive;
+  // font-style: italic;
+  font-size: 18px;
+  color: #999;
+  margin-top: 15px;
+  transform: translateY(-24px) translateX(15px);
+}
+
+.postDesc {
+  font-family: "Old Standard TT", serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+  margin-top: 15px;
+  overflow: hidden;
+  // text-overflow: ellipsis;
+  // display: -webkit-box;
+  // -webkit-line-clamp: 4;
+  // -webkit-box-orient: vertical;
+}

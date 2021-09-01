@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+@import "./variables";
+@import "./mixins";
+@import "./signin";
+
+@import "./layout";
+@import "./navbar";
+@import "./svg-text";
+@import "./clouds";
+@import "./shop/shopDown";
+@import "./space";
+@import "./footer";
+@import "./card";
+@import "./contact";
+@import "./connect";
+@import "./blog/posts";
+@import "./blog/categories.scss";
+@import "./homepace";

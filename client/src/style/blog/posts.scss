@@ -1,0 +1,157 @@
+.post {
+  width: 385px;
+  margin: 0px 25px 40px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.postImg {
+  width: 385px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postCat {
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: #be9656;
+  line-height: 19px;
+  margin-top: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.postTitle {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 15px;
+  cursor: pointer;
+  @media (max-width: 615px) {
+    display: flex;
+  }
+}
+
+.postDate {
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 400;
+  color: #999999;
+  margin-top: 15px;
+}
+
+.postDesc {
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 24px;
+  color: white;
+  margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.topImg {
+  width: 3vw;
+  border-radius: 50%;
+  margin-right: 5px;
+  transform: translateY(-30px);
+  @media (max-width: 615px) {
+    transform: translateX(-60px);
+    width: 7vw;
+  }
+}
+
+.singlePost {
+  flex: 9;
+  background-color: black;
+}
+
+.singlePostWrapper {
+  padding: 30px;
+  padding-right: 0;
+}
+
+.singlePostImg {
+  width: 90vw;
+  height: 100vh;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.singlePostTitle {
+  text-align: center;
+  font-size: 48px;
+  font-family: "Tangerine", cursive;
+  color: white;
+}
+
+.singlePostEdit {
+  // float: right;
+  font-size: 16px;
+}
+
+.singlePostIcon {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.singlePostIcon:first-child {
+  color: #b535fc;
+}
+.singlePostIcon:last-child {
+  color: tomato;
+}
+
+.singlePostInfo {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 16px;
+  color: #b535fc;
+  font-family: "Old Standard TT", serif;
+}
+
+.singlePostDesc {
+  color: white;
+  font-size: 18px;
+  line-height: 45px;
+  font-family: "Old Standard TT", serif;
+}
+
+.singlePostDesc::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.singlePostUsernamelink {
+  text-decoration: none;
+  color: #b535fc;
+}
+
+.singlePostUsername {
+  text-decoration: none;
+  color: #b535fc;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 2px;
+  background: lightgrey;
+}
+
+*::-webkit-scrollbar {
+  background: black;
+}
