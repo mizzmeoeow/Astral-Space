@@ -18,7 +18,7 @@ export default function Write(props) {
     };
     if (file) {
       const data = new FormData();
-      const filename = "http://localhost:5000/images/" + file.name;
+      const filename = "https://localhost:5000/images/" + file.name;
       data.append("name", filename);
       data.append("file", file);
       newPost.photo = filename;
