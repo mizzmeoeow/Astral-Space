@@ -33,7 +33,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/static", express.static(path.join(__dirname, "client/public")));
+app.use("/static", express.static(path.join(__dirname, "client/build")));
 
 app.get("/api/passwords", (req, res) => {
   const count = 5;
