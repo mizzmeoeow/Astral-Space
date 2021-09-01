@@ -33,7 +33,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/static", express.static(path.join(__dirname + "client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("/api/passwords", (req, res) => {
   const count = 5;
@@ -119,8 +119,8 @@ app.use(function (req, res, next) {
   });
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build", "index.html"));
 });
 
 const port = process.env.PORT || 5000;
