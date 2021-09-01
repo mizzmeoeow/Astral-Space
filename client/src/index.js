@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./app";
 import axios from "axios";
 
 import "./style/main.scss";
 
 import * as serviceWorker from "./serviceWorker";
-import history from "./history";
 
 axios.defaults.baseURL = "http://localhost:5000/api/";
 
@@ -40,7 +39,7 @@ axios.interceptors.response.use(
 );
 
 ReactDOM.render(
-  <Router history={history}>
+  <Router>
     <React.StrictMode>
       <App />
     </React.StrictMode>

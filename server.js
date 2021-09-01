@@ -26,14 +26,14 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(morgan("dev"));
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-type,Authorization");
   next();
 });
 
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client/public")));
 
 app.get("/api/passwords", (req, res) => {
   const count = 5;

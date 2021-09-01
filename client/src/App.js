@@ -1,3 +1,4 @@
+import { withRouter } from "react-router";
 import React, { Component } from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import jwt_decode from "jwt-decode";
@@ -53,7 +54,7 @@ if (sessionStorage.jwtToken != null) {
   }
 }
 
-export default class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
 
@@ -72,9 +73,9 @@ export default class App extends Component {
           <Provider store={store}>
             <Layout>
               <Route exact path="/" component={LandingPage} />
-              <Route path="/contact" exact component={Contact} />
-              <Route path="/shop" exact component={Shop} />
-              <Route path="/unsuccess" exact component={Unsuccess} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/shop" component={Shop} />
+              <Route path="/unsuccess" component={Unsuccess} />
 
               <Route
                 path="/login"
@@ -87,12 +88,7 @@ export default class App extends Component {
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 {/* <PrivateRoute path="/settings" exact component={Settings} /> */}
-                <PrivateRoute
-                  path="/connect"
-                  exact
-                  component={Connect}
-                  user={user}
-                />
+                <PrivateRoute path="/connect" component={Connect} user={user} />
                 <PrivateRoute path="/literature" exact component={Literature} />
 
                 <PrivateRoute
@@ -101,19 +97,14 @@ export default class App extends Component {
                   render={() => <Architecture user={user} />}
                 />
                 <PrivateRoute path="/Cinema" exact component={Cinema} />
-                <PrivateRoute
-                  path="/GraphicDesign"
-                  exact
-                  component={GraphicDesign}
-                />
-                <PrivateRoute path="/Music" exact component={Music} />
-                <PrivateRoute path="/Painting" exact component={Painting} />
+                <PrivateRoute path="/GraphicDesign" component={GraphicDesign} />
+                <PrivateRoute path="/Music" component={Music} />
+                <PrivateRoute path="/Painting" component={Painting} />
                 <PrivateRoute
                   path="/PerformingArts"
-                  exact
                   component={PerformingArts}
                 />
-                <PrivateRoute path="/Sculpting" exact component={Sculpting} />
+                <PrivateRoute path="/Sculpting" component={Sculpting} />
                 <Route path="/post/:postId">
                   <Single />
                 </Route>
@@ -125,3 +116,7 @@ export default class App extends Component {
     );
   }
 }
+
+App.defaultProps = {};
+
+export default withRouter(App);
