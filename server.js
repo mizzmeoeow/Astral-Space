@@ -91,9 +91,9 @@ app.use("/api/categories", categoryRoute);
 app.use("/api/contact", contactRoute);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(__dirname + "/dist/"));
+  app.use(express.static(__dirname + "/dist/astralspace"));
   app.get(/.*/, function (req, res) {
-    res.sendFile(__dirname + "/dist/index.html");
+    res.sendFile(__dirname + "/dist/astralspace/index.html");
   });
 }
 
