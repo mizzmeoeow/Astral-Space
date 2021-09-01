@@ -33,7 +33,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/static", express.static(path.join(__dirname, "client/build")));
+app.use("/static", express.static(path.join(__dirname + "client/build")));
 
 app.get("/api/passwords", (req, res) => {
   const count = 5;
@@ -90,12 +90,12 @@ app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 app.use("/api/contact", contactRoute);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(__dirname + "/dist/astralspace"));
-  app.get(/.*/, function (req, res) {
-    res.sendFile(__dirname + "/client/public/index.html");
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(__dirname + "/dist/astralspace"));
+//   app.get(/.*/, function (req, res) {
+//     res.sendFile(__dirname + "/client/public/index.html");
+//   });
+// }
 
 app.use(errorHandler);
 
