@@ -30,6 +30,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 // import Settings from "./components/categories/pages/settings/settings";
 import Single from "./components/categories/pages/single/single";
+import LoginFormUnsuccess from "./components/auth/login/loginFormUnsuccess";
 
 if (sessionStorage.jwtToken != null) {
   // Set auth token header auth
@@ -76,6 +77,7 @@ class App extends Component {
               <Route path="/contact" component={Contact} />
               <Route path="/shop" component={Shop} />
               <Route path="/unsuccess" component={Unsuccess} />
+              <Route path="/loginunsuccess" component={LoginFormUnsuccess} />
 
               <Route
                 path="/login"

@@ -44,7 +44,19 @@ router.post("/login", (req, res) => {
   User.findOne({ email }).then((user) => {
     if (!user) {
       errors.email = "User not found";
-      return res.status(404).json({ errors });
+      return res.status(404).json({ message: "wrong credentials, try again" });
+    }
+    if (err) {
+      return res.send({
+        success: false,
+        message: "Error: server error",
+      });
+    }
+    if (!user.validPassword(password)) {
+      return res.send({
+        success: false,
+        message: "Error: Invalid Password",
+      });
     }
 
     bcrypt.compare(password, user.password).then((isMatch) => {
@@ -75,7 +87,11 @@ router.post("/login", (req, res) => {
       } else {
         //Incorrect Password
         errors.password = "Invalid Login Credentials";
-        return res.status(400).json({ errors, token: null, success: false });
+        return res.status(400).json("Invalid email or password", {
+          errors,
+          token: null,
+          success: false,
+        });
       }
     });
   });

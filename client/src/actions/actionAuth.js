@@ -46,10 +46,12 @@ export const loginUser = (userData) => (dispatch) => {
       // console.log(decoded);
       // console.log(res);
     })
+
     .catch((err) =>
       dispatch({
         type: GET_ERRORS,
         payload: err.response.data,
+        alert: "You have incorrect credentials",
       })
     );
 };

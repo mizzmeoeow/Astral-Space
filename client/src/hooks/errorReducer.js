@@ -1,8 +1,11 @@
 import { GET_ERRORS } from "../actions/actionTypes";
 
-const initialState = {};
+const initialState = {
+  error: null,
+  isOpen: false,
+};
 
-export default function foo(state = initialState, action) {
+export default function errorReducer(state = initialState, action) {
   switch (action.type) {
     case GET_ERRORS:
       return action.payload;

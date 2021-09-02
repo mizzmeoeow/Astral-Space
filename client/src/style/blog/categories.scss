@@ -92,7 +92,8 @@
   cursor: pointer;
   font-size: 16px;
   @media (max-width: 615px) {
-    right: 20px;
+    right: 10px;
+    transform: translateY(60px);
   }
 }
 

@@ -13,6 +13,7 @@ class LoginForm extends Component {
       password: "",
       submitted: false,
       errors: {},
+      wrongCredentials: false,
     };
   }
 
@@ -24,6 +25,7 @@ class LoginForm extends Component {
     if (props.errors) {
       return {
         errors: props.errors,
+        warn: "You have incorrect credentials",
       };
     }
   }
@@ -46,60 +48,60 @@ class LoginForm extends Component {
   render() {
     const { errors } = this.state;
     if (this.props.auth.isAuthenticated) return <Redirect to="/dashboard" />;
-    else
-      return (
-        <div id="login">
-          <div className="sign-in-form">
-            <div className="input-group">
-              <form onSubmit={this.onSubmit}>
-                <div className="error-text">{this.state.errorText}</div>
 
+    return (
+      <div id="login">
+        <div className="sign-in-form">
+          <div className="input-group">
+            <form onSubmit={this.onSubmit}>
+              <div className="error-text">{this.state.errorText}</div>
+
+              <input
+                className="login-input"
+                type="email"
+                id="email"
+                name="email"
+                error={errors.email}
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.onChange}
+                autoComplete="none"
+                required
+              />
+
+              <div>
                 <input
                   className="login-input"
-                  type="email"
-                  id="email"
-                  name="email"
-                  error={errors.email}
-                  placeholder="Email"
-                  value={this.state.email}
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
                   onChange={this.onChange}
+                  value={this.state.password}
+                  error={errors.password}
                   autoComplete="none"
                   required
                 />
-
-                <div>
-                  <input
-                    className="login-input"
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Password"
-                    onChange={this.onChange}
-                    value={this.state.password}
-                    error={errors.password}
-                    autoComplete="none"
-                    required
-                  />
-                </div>
-                <div className="">
-                  <button
-                    className="login-btn"
-                    onClick={this.handleProtected}
-                    type="submit"
-                  >
-                    Launch
+              </div>
+              <div className="">
+                <button
+                  className="login-btn"
+                  onClick={this.handleProtected}
+                  type="submit"
+                >
+                  Launch
+                </button>
+                <a href="/">
+                  <button type="button" className="back-btn">
+                    Go Back
                   </button>
-                  <a href="/">
-                    <button type="button" className="back-btn">
-                      Go Back
-                    </button>
-                  </a>
-                </div>
-              </form>
-            </div>
+                </a>
+              </div>
+            </form>
           </div>
         </div>
-      );
+      </div>
+    );
   }
 }
 
