@@ -142,6 +142,20 @@
   color: #b535fc;
 }
 
+.singlePostAuthor {
+  transform: translateY(-25px) translateX(500px);
+  @media (max-width: 615px) {
+    transform: translateX(230px) translateY(-10px);
+  }
+}
+
+.singlePostDate {
+  transform: translateX(12px);
+  @media (max-width: 615px) {
+    transform: translateX(23px) translateY(11px);
+  }
+}
+
 .singlePostUsername {
   text-decoration: none;
   color: #b535fc;
@@ -154,4 +168,20 @@
 
 *::-webkit-scrollbar {
   background: black;
+}
+
+.editModeTitle {
+  transform: translateX(95px) translateY(12px);
+}
+
+.editModeBody {
+  height: 100vh;
+  transform: translateX(-80px);
+}
+
+.editModeButton {
+  transform: translateY(-70px);
+  @media (max-width: 615px) {
+    transform: translateX(300px) translateY(-90px);
+  }
 }

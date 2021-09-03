@@ -55,7 +55,7 @@ function SinglePost(props) {
           <input
             type="text"
             value={title}
-            className="singlePostTitleInput"
+            className="writeInput writeTitle editModeTitle"
             autoFocus
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -92,7 +92,7 @@ function SinglePost(props) {
         </div>
         {updateMode ? (
           <textarea
-            className="singlePostDescInput"
+            className="writeInput editModeBody"
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
           />
@@ -100,7 +100,10 @@ function SinglePost(props) {
           <p className="singlePostDesc">{post.body}</p>
         )}
         {updateMode && (
-          <button className="singlePostButton" onClick={handleUpdate}>
+          <button
+            className="singlePostButton editModeButton"
+            onClick={handleUpdate}
+          >
             Update
           </button>
         )}
