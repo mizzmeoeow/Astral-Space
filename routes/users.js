@@ -100,7 +100,7 @@ router.get("/user/:id", requireLogin, (req, res) => {
         });
     })
     .catch((err) => {
-      return res.status(404).json({ error: "User not found" });
+      return res.status(401).json({ error: "User not found" });
     });
 });
 

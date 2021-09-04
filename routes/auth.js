@@ -44,18 +44,20 @@ router.post("/login", (req, res) => {
   User.findOne({ email }).then((user) => {
     if (!user) {
       errors.email = "User not found";
-      return res.status(404).json({ message: "wrong credentials, try again" });
+      return res.status(401).json({ message: errors.email });
     }
     if (err) {
       return res.send({
         success: false,
         message: "Error: server error",
+        Result: 0,
       });
     }
     if (!user.validPassword(password)) {
       return res.send({
         success: false,
         message: "Error: Invalid Password",
+        Result: 0,
       });
     }
 
@@ -81,16 +83,20 @@ router.post("/login", (req, res) => {
               httpOnly: true,
               secure: true,
               sameSite: true,
+              Result: 1,
+              Cookie: "COOKIE",
             });
           }
         );
       } else {
         //Incorrect Password
         errors.password = "Invalid Login Credentials";
-        return res.status(400).json("Invalid email or password", {
+        return res.status(400).json({
           errors,
           token: null,
           success: false,
+          Result: 0,
+          alert: "wrong credentials, please try again",
         });
       }
     });

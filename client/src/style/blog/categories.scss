@@ -48,7 +48,7 @@
   color: #b535fc;
   cursor: pointer;
   @media (max-width: 615px) {
-    transform: translateX(-17px);
+    transform: translateX(-45px);
   }
 }
 
@@ -56,7 +56,7 @@
   font-size: 1rem;
   color: white;
   border: none;
-  padding: 20px;
+  padding: 10px;
   width: 60vw;
   background: transparent;
   border: 2px solid lightgray;
@@ -67,7 +67,8 @@
   border-radius: 10px;
   color: white;
   @media (max-width: 615px) {
-    transform: translateX(-17px);
+    transform: translateX(-35px);
+    width: 30vw;
   }
 }
 
@@ -79,21 +80,21 @@
   font-size: 1rem;
   height: 130vh;
   @media (max-width: 615px) {
-    height: 98vh;
+    height: 150vh;
   }
 }
 
 .writeSubmit {
   position: absolute;
   top: 5px;
-  right: 200px;
+  right: 290px;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
   @media (max-width: 615px) {
     right: 10px;
-    transform: translateY(60px);
+    transform: translateY(-10px);
   }
 }
 
@@ -147,6 +148,10 @@
   margin-top: 15px;
   cursor: pointer;
   color: white;
+  @media (max-width: 615px) {
+    font-size: 18px;
+    width: 30vw;
+  }
 }
 
 .cat-link {
@@ -169,8 +174,8 @@
   line-height: 20px;
   margin-top: 15px;
   overflow: hidden;
-  // text-overflow: ellipsis;
-  // display: -webkit-box;
-  // -webkit-line-clamp: 4;
-  // -webkit-box-orient: vertical;
+  @media (max-width: 615px) {
+    font-size: 12px;
+    width: 25vw;
+  }
 }

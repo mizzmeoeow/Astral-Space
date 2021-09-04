@@ -41,15 +41,12 @@ export const loginUser = (userData) => (dispatch) => {
 
       // Set current user
       dispatch(setCurrentUser(decoded));
-
-      // console.log(token);
-      // console.log(decoded);
-      // console.log(res);
     })
     .catch((err) =>
       dispatch({
         type: GET_ERRORS,
         payload: err.response.data,
+        alert: "Wrong Credentials, please try again",
       })
     );
 };

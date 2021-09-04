@@ -12,7 +12,7 @@ class LoginForm extends Component {
       email: "",
       password: "",
       submitted: false,
-      errors: {},
+      errors: "",
     };
   }
 
@@ -52,14 +52,14 @@ class LoginForm extends Component {
           <div className="sign-in-form">
             <div className="input-group">
               <form onSubmit={this.onSubmit}>
-                <div className="error-text">{this.state.errorText}</div>
+                <div className="error-text">{this.state.errors}</div>
 
                 <input
                   className="login-input"
                   type="email"
                   id="email"
                   name="email"
-                  error={errors.email}
+                  error={this.state.errors}
                   placeholder="Email"
                   value={this.state.email}
                   onChange={this.onChange}

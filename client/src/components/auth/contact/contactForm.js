@@ -39,16 +39,15 @@ function ContactForm(props) {
       onSubmit={sendEmail}
       method="POST"
     >
-      <div className="input-group">
+      <div className="input-group contact-group">
         <label htmlFor="email">Your Email:</label>
+        <br />
         <input
           autoComplete="none"
           type="text"
           name="email"
           className="login-input email"
           placeholder="Email"
-          // value={this.state.email}
-          // onChange={this.onEmailChange.bind(this)}
           required
         />
       </div>
@@ -57,6 +56,7 @@ function ContactForm(props) {
         <label htmlFor="name" className="your-name">
           Your Name:
         </label>
+        <br />
         <input
           autoComplete="none"
           type="text"
@@ -68,29 +68,24 @@ function ContactForm(props) {
           required
         />
       </div>
-
+      <br />
       <div className="input-group">
-        <label htmlFor="input">
+        <label className="textarea-label" htmlFor="input">
           Please, let me know how I can help you today:
         </label>
+        <br />
         <textarea
           name="message"
           type="text"
           className="login-input help"
           placeholder="How can I help?"
-          cols="68"
+          cols="40"
           rows="6"
-          // value={this.state.message}
-          // onChange={this.onMessageChange.bind(this)}
           required
         />
       </div>
 
-      <button
-        type="submit"
-        className="login-btn contact-btn"
-        // onClick={this.handleSubmit}
-      >
+      <button type="submit" className="login-btn contact-btn">
         Launch
       </button>
       <a href="/">

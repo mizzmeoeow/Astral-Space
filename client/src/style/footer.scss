@@ -16,7 +16,7 @@
     @include footer;
     text-decoration: none;
     @media (max-width: 715px) {
-      margin: 5px;
+      margin: 20px;
     }
   }
 
@@ -26,6 +26,9 @@
 
   .lmp {
     @include footer;
+    @media (max-width: 715px) {
+      margin-left: 0;
+    }
   }
 }
 

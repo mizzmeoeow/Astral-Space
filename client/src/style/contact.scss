@@ -1,14 +1,23 @@
 .contact-form {
   text-align: left;
   justify-items: center;
-  .email {
-    transform: translateX(5px);
+  transform: translateX(-400px);
+  @media (max-width: 615px) {
+    font-size: 10px;
   }
-  .full-name {
-    transform: translateX(10px);
-  }
+
   .contact-btn {
     transform: translateX(165px);
+    @media (max-width: 615px) {
+      transform: translateX(0);
+    }
+  }
+}
+
+.help {
+  transform: translateX(100px);
+  @media (max-width: 615px) {
+    transform: translateX(10px);
   }
 }
 

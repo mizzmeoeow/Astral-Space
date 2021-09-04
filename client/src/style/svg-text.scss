@@ -12,9 +12,9 @@
     [shop-e];
   grid-template-columns: 1fr;
 
-  @media (max-width: 615px) {
-    transform: translateX(50px);
-  }
+  // @media (max-width: 615px) {
+  //   transform: translateX(50px);
+  // }
 
   a {
     text-decoration: none;
