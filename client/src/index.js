@@ -8,7 +8,7 @@ import "./style/main.scss";
 
 import * as serviceWorker from "./serviceWorker";
 
-axios.defaults.baseURL = "http://localhost:5000/api/";
+axios.defaults.baseURL = "https://astralspace.herokuapp.com/api/";
 
 let userData = JSON.parse(localStorage.getItem("userData"));
 let token;
