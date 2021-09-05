@@ -3,14 +3,12 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import axios from "axios";
-import { logoutUser } from "./actions/actionAuth";
 
 import "./style/main.scss";
 
 import * as serviceWorker from "./serviceWorker";
-import store from "./store";
 
-axios.defaults.baseURL = "https://astralspace.herokuapp.com/api/";
+axios.defaults.baseURL = "http://localhost:5000/api/";
 
 let userData = JSON.parse(localStorage.getItem("userData"));
 let token;
@@ -39,10 +37,6 @@ axios.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-axios.interceptors.response.use((response) => {
-  if (response.status === 404) store.dispatch(logoutUser);
-  return response;
-});
 
 ReactDOM.render(
   <Router>
