@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import background from "../../../images/space.jpg";
+import background from "./images/space.jpg";
 import SinglePost from "../../categories/pages/posts/singlePost";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";

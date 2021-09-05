@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import background from "../../../images/space.jpg";
+import background from "./images/space.jpg";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../../actions/actionAuth";

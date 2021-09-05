@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import background from "../../../images/space.jpg";
+import background from "./images/space.jpg";
 import Posts from "../../categories/pages/posts/posts";
 import axios from "axios";
 import { connect } from "react-redux";
