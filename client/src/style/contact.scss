@@ -1,9 +1,21 @@
 .contact-form {
-  text-align: left;
-  justify-items: center;
   transform: translateX(-400px);
   @media (max-width: 615px) {
     font-size: 10px;
+  }
+
+  .email {
+    transform: translateX(100px);
+    @media (max-width: 615px) {
+      transform: translateX(0);
+    }
+  }
+
+  .full-name {
+    transform: translateX(100px);
+    @media (max-width: 615px) {
+      transform: translateX(0);
+    }
   }
 
   .contact-btn {
@@ -28,5 +40,5 @@ textarea {
 .successful-message {
   font-size: 20px;
   // float: left;
-  transform: translateX(-190px) translateY(60px);
+  transform: translateX(-110px) translateY(60px);
 }
