@@ -16,7 +16,7 @@ const Image = require("./dbSchema/models/image");
 const config = require("./config/keys");
 const jwt = require("jsonwebtoken");
 const corsOptions = {
-  origin: "https://astralspace.herokuapp.com:3000",
+  origin: "https://astralspace.herokuapp.com",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
