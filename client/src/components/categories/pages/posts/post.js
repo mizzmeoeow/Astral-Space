@@ -5,7 +5,12 @@ export default function Post({ post }) {
   return (
     <div className="search-results">
       {post.photo && (
-        <img className="card__img" src={post.photo} alt="" key={post.id} />
+        <img
+          className="card__img"
+          src={`/images/${post.photo}`}
+          alt=""
+          key={post.id}
+        />
       )}
       <div className="postInfo" key={post.name}>
         <div className="postCats">

@@ -15,6 +15,7 @@ const errorHandler = require("./middleware/error");
 const Image = require("./dbSchema/models/image");
 const config = require("./config/keys");
 const jwt = require("jsonwebtoken");
+const { patch } = require("./routes/auth");
 const corsOptions = {
   origin: "https://astral-space.herokuapp.com",
   credentials: true, //access-control-allow-credentials:true
@@ -63,7 +64,7 @@ const storage = multer.diskStorage({
     cb(null, "images");
   },
   filename: (req, file, cb) => {
-    cb(null, req.body.name);
+    cb(null, Date.now() + path.extname(file.originalname));
   },
 });
 

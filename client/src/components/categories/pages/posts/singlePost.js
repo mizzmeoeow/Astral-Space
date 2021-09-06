@@ -49,7 +49,7 @@ function SinglePost(props) {
     <div className="singlePost">
       <div className="singlePostWrapper">
         {post.photo && (
-          <img src={post.photo} alt="" className="singlePostImg" />
+          <img src={`/images/${post.photo}`} alt="" className="singlePostImg" />
         )}
         {updateMode ? (
           <input
