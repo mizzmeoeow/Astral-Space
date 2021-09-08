@@ -90,11 +90,13 @@ class LoginForm extends Component {
                         Launch
                       </button>
                     }
-                    position="right center"
+                    position="center"
                   >
                     <div>
-                      You have entered a wrong email or password, please try
-                      again.
+                      If this pop up stays on your screen, you have entered a
+                      wrong email or password, please try again or register
+                      again. I apologize for the inconvenience, I am working on
+                      password retrieval...
                     </div>
                   </Popup>
 
