@@ -10,17 +10,8 @@ const categoryRoute = require("./routes/categories");
 const contactRoute = require("./routes/contactRoute");
 const multer = require("multer");
 const path = require("path");
-const generatePassword = require("password-generator");
 const errorHandler = require("./middleware/error");
-const Image = require("./dbSchema/models/image");
-const config = require("./config/keys");
 const jwt = require("jsonwebtoken");
-const { patch } = require("./routes/auth");
-const corsOptions = {
-  origin: "https://astral-space.herokuapp.com",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
 
 const app = express();
 
@@ -35,20 +26,6 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static(path.join(__dirname, "./client/build")));
-
-app.get("/api/passwords", (req, res) => {
-  const count = 5;
-
-  // Generate some passwords
-  const passwords = Array.from(Array(count).keys()).map((i) =>
-    generatePassword(12, false)
-  );
-
-  // Return them as json
-  res.json(passwords);
-
-  console.log(`Sent ${count} passwords`);
-});
 
 mongoose
   .connect(process.env.DATABASE_LOCAL)
@@ -70,6 +47,25 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// const storage = new GridFsStorage({
+//   url: mongoURI,
+//   file: (req, file) => {
+//     return new Promise((resolve, reject) => {
+//       crypto.randomBytes(16, (err, buf) => {
+//         if (err) {
+//           return reject(err);
+//         }
+//         const filename = file.originalname;
+//         const fileInfo = {
+//           filename: filename,
+//           bucketName: "uploads",
+//         };
+//         resolve(fileInfo);
+//       });
+//     });
+//   },
+// });
+
 app.post("/api/upload", upload.single("file"), (req, res) => {
   return res.status(200).json("File has been uploaded");
 });
@@ -90,13 +86,6 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 app.use("/api/contact", contactRoute);
-
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(__dirname + "/dist/astralspace"));
-//   app.get(/.*/, function (req, res) {
-//     res.sendFile(__dirname + "/client/public/index.html");
-//   });
-// }
 
 app.use(errorHandler);
 

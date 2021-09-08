@@ -49,6 +49,13 @@
   margin-top: 15px;
 }
 
+.desc-container {
+  width: 50vw;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 10px;
+}
+
 .postDesc {
   font-family: "Varela Round", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -96,6 +103,10 @@
   font-size: 48px;
   font-family: "Tangerine", cursive;
   color: white;
+  @media (max-width: 615px) {
+    font-size: 38px;
+    width: 90vw;
+  }
 }
 
 .singlePostEdit {
@@ -143,16 +154,16 @@
 }
 
 .singlePostAuthor {
-  transform: translateY(-25px) translateX(500px);
+  transform: translateY(5px);
   @media (max-width: 615px) {
-    transform: translateX(230px) translateY(-10px);
+    transform: translateX(-2px);
   }
 }
 
 .singlePostDate {
-  transform: translateX(12px);
+  transform: translateY(5px);
   @media (max-width: 615px) {
-    transform: translateX(23px) translateY(11px);
+    transform: translateX(5px) translateY(2px);
   }
 }
 
@@ -184,4 +195,8 @@
   @media (max-width: 615px) {
     transform: translateX(300px) translateY(-90px);
   }
+}
+
+.truncate-arrow {
+  color: #b535fc;
 }

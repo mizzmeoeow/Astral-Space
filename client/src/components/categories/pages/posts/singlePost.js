@@ -33,14 +33,12 @@ function SinglePost(props) {
 
   const handleUpdate = async () => {
     try {
-      console.log("try");
       await axios.put(`posts/${post._id}`, {
         username: user.username,
         title,
         desc,
       });
 
-      console.log("try2");
       setUpdateMode(false);
     } catch (err) {}
   };

@@ -88,7 +88,7 @@ function ContactForm(props) {
       <button type="submit" className="login-btn contact-btn">
         Launch
       </button>
-      <a href="/">
+      <a href="/dashboard">
         <button type="button" className="back-btn contact-btn">
           Go Back
         </button>

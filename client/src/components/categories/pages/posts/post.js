@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Truncate from "react-truncate";
 
 export default function Post({ post }) {
   return (
@@ -30,9 +31,24 @@ export default function Post({ post }) {
           {new Date(post.createdAt).toDateString()}
         </span>
       </div>
-      <p className="postDesc" key={post.desc}>
-        {post.body}
-      </p>
+      <div className="desc-container">
+        <Truncate
+          lines={2}
+          ellipsis={
+            <span className="postDesc" key={post.desc}>
+              <Link
+                to={`post/${post._id}`}
+                className="cat-link truncate-arrow"
+                key={post.title}
+              >
+                See more...<i className="fas fa-arrow-right truncate-arrow"></i>
+              </Link>
+            </span>
+          }
+        >
+          {post.body}
+        </Truncate>
+      </div>
     </div>
   );
 }

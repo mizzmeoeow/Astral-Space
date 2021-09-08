@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { loginUser } from "../../../actions/actionAuth";
 import { Redirect } from "react-router-dom";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -82,13 +84,20 @@ class LoginForm extends Component {
                   />
                 </div>
                 <div className="">
-                  <button
-                    className="login-btn"
-                    onClick={this.handleProtected}
-                    type="submit"
+                  <Popup
+                    trigger={
+                      <button className="login-btn" type="submit">
+                        Launch
+                      </button>
+                    }
+                    position="right center"
                   >
-                    Launch
-                  </button>
+                    <div>
+                      You have entered a wrong email or password, please try
+                      again.
+                    </div>
+                  </Popup>
+
                   <a href="/">
                     <button type="button" className="back-btn">
                       Go Back
