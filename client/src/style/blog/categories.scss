@@ -47,8 +47,27 @@
   font-size: 20px;
   color: #b535fc;
   cursor: pointer;
-  @media (max-width: 615px) {
-    transform: translateX(-45px);
+  transform: translateX(65px);
+  @media (min-width: 100px) and (max-width: 290px) {
+    transform: translateX(-28px) translateY(90px);
+  }
+  @media (min-width: 290px) and (max-width: 330px) {
+    transform: translateX(-35px) translateY(70px);
+  }
+  @media (min-width: 330px) and (max-width: 400px) {
+    transform: translateX(-15px) translateY(70px);
+  }
+  @media (min-width: 400px) and (max-width: 520px) {
+    transform: translateX(-18px) translateY(70px);
+  }
+  @media (min-width: 520px) and (max-width: 700px) {
+    transform: translateX(-5px) translateY(60px);
+  }
+  @media (min-width: 700px) and (max-width: 1000px) {
+    transform: translateX(-48px) translateY(95px);
+  }
+  @media (min-width: 1000px) and (max-width: 1200px) {
+    transform: translateX(40px) translateY(90px);
   }
 }
 
@@ -60,15 +79,53 @@
   width: 60vw;
   background: transparent;
   border: 2px solid lightgray;
+  transform: translateX(70px);
+  @media (min-width: 100px) and (max-width: 300px) {
+    transform: translateX(20px) translateY(100px);
+  }
+  @media (min-width: 300px) and (max-width: 520px) {
+    transform: translateX(-10px) translateY(80px);
+  }
+  @media (min-width: 520px) and (max-width: 700px) {
+    transform: translateX(30px) translateY(70px);
+  }
+  @media (min-width: 700px) and (max-width: 800px) {
+    transform: translateX(-40px) translateY(100px);
+  }
+  @media (min-width: 800px) and (max-width: 1100px) {
+    transform: translateX(50px) translateY(100px);
+  }
 }
 
 .writeTitle {
   width: 52vw;
   border-radius: 10px;
   color: white;
-  @media (max-width: 615px) {
-    transform: translateX(-35px);
+  @media (min-width: 100px) and (max-width: 310px) {
+    transform: translateX(-20px) translateY(90px);
     width: 30vw;
+  }
+  @media (min-width: 310px) and (max-width: 360px) {
+    transform: translateX(-30px) translateY(70px);
+    width: 30vw;
+  }
+  @media (min-width: 360px) and (max-width: 400px) {
+    transform: translateX(-5px) translateY(70px);
+    width: 30vw;
+  }
+  @media (min-width: 400px) and (max-width: 500px) {
+    transform: translateX(-15px) translateY(70px);
+    width: 40vw;
+  }
+  @media (min-width: 500px) and (max-width: 700px) {
+    transform: translateX(5px) translateY(60px);
+  }
+  @media (min-width: 700px) and (max-width: 800px) {
+    width: 50vw;
+  }
+
+  @media (min-width: 800px) and (max-width: 1100px) {
+    transform: translateY(90px) translateX(50px);
   }
 }
 
@@ -78,23 +135,25 @@
 
 .writeText {
   font-size: 1rem;
-  height: 130vh;
-  @media (max-width: 615px) {
-    height: 150vh;
-  }
+  height: 45vh;
 }
 
 .writeSubmit {
   position: absolute;
-  top: 5px;
-  right: 290px;
+  right: 300px;
+  margin-top: 10px;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
-  @media (max-width: 615px) {
-    right: 10px;
-    transform: translateY(-10px);
+  @media (min-width: 100px) and (max-width: 300px) {
+    transform: translateX(230px) translateY(100px);
+  }
+  @media (min-width: 300px) and (max-width: 700px) {
+    transform: translateX(290px) translateY(80px);
+  }
+  @media (min-width: 700px) and (max-width: 1200px) {
+    transform: translateX(270px) translateY(130px);
   }
 }
 

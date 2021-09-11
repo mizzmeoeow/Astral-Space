@@ -20,9 +20,6 @@ class ProfileSpace extends Component {
         }}
       >
         <div className="homespace-blog">
-          <h5 className="homepace-header">
-            What would you like to say to your fellow creators?
-          </h5>
           <Write user={user} />
         </div>
       </div>

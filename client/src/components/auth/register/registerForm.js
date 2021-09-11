@@ -185,7 +185,7 @@ function RegisterForm() {
           autoComplete="off"
           type="question"
           name="question"
-          className="login-input"
+          className="login-input question"
           placeholder="Question"
           value={question}
           onChange={handleChangeInput}

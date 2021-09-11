@@ -52,14 +52,15 @@ class Dashboard extends Component {
               },
             }}
           />
-          <h4 className="greeting">
-            <b>Welcome back,</b> {user.username}
-          </h4>
         </div>
         <button onClick={this.onLogoutClick} className="login-btn logout-btn">
           Logout
         </button>
         <ProfileNavbar user={user} />
+        <h4 className="greeting">
+          <b>Welcome back,</b> {user.username}, what would you like to say to
+          your fellow creators?
+        </h4>
         <ProfileSpace user={user} />
         <ProfileFooter />
       </div>

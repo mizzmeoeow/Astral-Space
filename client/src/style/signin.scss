@@ -30,9 +30,10 @@
     }
   }
   .question {
-    transform: translateX(80px);
-    @media (max-width: 615px) {
-      transform: translateX(-100px);
+    transform: translateX(110px);
+
+    @media (min-width: 200px) and (max-width: 550px) {
+      transform: translateX(-48px);
     }
   }
 
@@ -117,13 +118,44 @@ button {
 }
 
 .register-fo {
-  @media (max-width: 615px) {
-    transform: translateX(-310px);
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translateX(-305px);
+  }
+
+  @media (min-width: 300px) and (max-width: 400px) {
+    transform: translateX(-270px) translateY(-50px);
+  }
+  @media (min-width: 400px) and (max-width: 520px) {
+    transform: translateX(-250px) translateY(20px);
+  }
+  @media (min-width: 520px) and (max-width: 700px) {
+    transform: translateX(-180px);
+  }
+  @media (min-width: 700px) and (max-width: 800px) {
+    transform: translateX(-240px) translateY(200px);
+  }
+  @media (min-width: 800px) and (max-width: 1100px) {
+    transform: translateX(-100px) translateY(300px);
   }
 }
 
 .sign-in-fo {
-  @media (max-width: 615px) {
-    transform: translateX(-350px);
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translateX(-455px);
+  }
+  @media (min-width: 300px) and (max-width: 400px) {
+    transform: translateX(-430px);
+  }
+  @media (min-width: 400px) and (max-width: 520px) {
+    transform: translateX(-390px);
+  }
+  @media (min-width: 520px) and (max-width: 700px) {
+    transform: translateX(-320px) translateY(70px);
+  }
+  @media (min-width: 700px) and (max-width: 800px) {
+    transform: translateX(-300px) translateY(100px);
+  }
+  @media (min-width: 800px) and (max-width: 1100px) {
+    transform: translateX(-200px) translateY(300px);
   }
 }

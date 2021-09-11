@@ -26,7 +26,7 @@
 
 .profile-links {
   color: white;
-  transform: translateY(-30px);
+  transform: translateY(-30px) translateX(110px);
   @media (max-width: 615px) {
     transform: translateY(-25px) translateX(-20px);
     width: 7vw;

@@ -3,7 +3,8 @@
   justify-content: right;
   font-family: "Old Standard TT", serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
+
   grid-template-rows:
     [signin-s] 64px [signin-e register-s] 64px [register-e shop-s] minmax(
       20px,

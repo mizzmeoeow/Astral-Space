@@ -74,7 +74,7 @@
   width: 3vw;
   border-radius: 50%;
   margin-right: 5px;
-  transform: translateY(-30px);
+  transform: translateY(-30px) translateX(110px);
   @media (max-width: 615px) {
     transform: translateX(-60px);
     width: 7vw;
@@ -178,8 +178,16 @@
 }
 
 *::-webkit-scrollbar {
-  background: black;
+  background: rgba(0, 0, 0, 0.2);
 }
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+// *::-webkit-scrollbar-track {
+//   background: rgba(0, 0, 0, 0.2);
+// }
 
 .editModeTitle {
   transform: translateX(95px) translateY(12px);

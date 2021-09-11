@@ -42,10 +42,16 @@
 }
 
 .greeting {
-  font-size: 30px;
+  margin: 10px;
+  font-size: 2rem;
   font-family: "Tangerine", cursive;
   color: #b535fc;
   @media (max-width: 615px) {
     font-size: 22px;
   }
+}
+
+body {
+  position: relative;
+  overflow: overlay;
 }
