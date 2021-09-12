@@ -6,7 +6,7 @@ class ConnectHeader extends Component {
       <div className="connect-header">
         <p className="connect">Connect</p>
         <div className="navbar">
-          <a href="/dashboard" className="nav-connect">
+          <a href="/dashboard" className="nav-connect home-connect">
             Home Space
           </a>
         </div>

@@ -52,10 +52,10 @@
     transform: translateX(-28px) translateY(90px);
   }
   @media (min-width: 290px) and (max-width: 330px) {
-    transform: translateX(-35px) translateY(70px);
+    transform: translateX(-5px) translateY(70px);
   }
   @media (min-width: 330px) and (max-width: 400px) {
-    transform: translateX(-15px) translateY(70px);
+    transform: translateX(5px) translateY(70px);
   }
   @media (min-width: 400px) and (max-width: 520px) {
     transform: translateX(-18px) translateY(70px);
@@ -84,7 +84,7 @@
     transform: translateX(20px) translateY(100px);
   }
   @media (min-width: 300px) and (max-width: 520px) {
-    transform: translateX(-10px) translateY(80px);
+    transform: translateX(20px) translateY(80px);
   }
   @media (min-width: 520px) and (max-width: 700px) {
     transform: translateX(30px) translateY(70px);
@@ -105,17 +105,17 @@
     transform: translateX(-20px) translateY(90px);
     width: 30vw;
   }
-  @media (min-width: 310px) and (max-width: 360px) {
-    transform: translateX(-30px) translateY(70px);
+  @media (min-width: 310px) and (max-width: 359px) {
+    transform: translateX(2px) translateY(70px);
     width: 30vw;
   }
   @media (min-width: 360px) and (max-width: 400px) {
-    transform: translateX(-5px) translateY(70px);
-    width: 30vw;
+    transform: translateX(15px) translateY(70px);
+    width: 35vw;
   }
   @media (min-width: 400px) and (max-width: 500px) {
-    transform: translateX(-15px) translateY(70px);
-    width: 40vw;
+    transform: translateX(5px) translateY(70px);
+    width: 45vw;
   }
   @media (min-width: 500px) and (max-width: 700px) {
     transform: translateX(5px) translateY(60px);
@@ -136,6 +136,9 @@
 .writeText {
   font-size: 1rem;
   height: 45vh;
+  @media (min-width: 100px) and (max-width: 300px) {
+    height: 40vh;
+  }
 }
 
 .writeSubmit {
@@ -147,7 +150,7 @@
   cursor: pointer;
   font-size: 16px;
   @media (min-width: 100px) and (max-width: 300px) {
-    transform: translateX(230px) translateY(100px);
+    transform: translateX(290px) translateY(100px);
   }
   @media (min-width: 300px) and (max-width: 700px) {
     transform: translateX(290px) translateY(80px);

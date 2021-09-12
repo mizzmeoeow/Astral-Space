@@ -22,20 +22,12 @@ function ConnectSpace() {
     fetchPosts();
   }, [search]);
 
-  // useEffect(() => {
-  //   setFilteredPosts(
-  //     posts.filter((post) =>
-  //       post.title.toLowerCase().includes(search.toLowerCase())
-  //     )
-  //   );
-  // }, [search, posts]);
-
   if (loading) {
     return <p>Loading posts...</p>;
   }
   return (
     <div
-      className="background"
+      className="background connect-background"
       style={{
         backgroundImage: `url(${background})`,
       }}

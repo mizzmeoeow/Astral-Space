@@ -13,12 +13,13 @@ export default function Posts({ posts }) {
     <div
       id="scrollableDiv"
       style={{
-        height: 1000,
+        height: 850,
         overflow: "auto",
         display: "flex",
         flexDirection: "column-reverse",
+        prefill: true,
       }}
-      className="posts scrollbar"
+      className="posts scrollbar connect-background"
       key={posts}
     >
       <InfiniteScroll

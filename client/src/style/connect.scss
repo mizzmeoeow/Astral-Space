@@ -21,7 +21,7 @@
 .connect-footer {
   position: absolute;
   height: 100px;
-  width: 98.75vw;
+  width: 100vw;
   background-color: black;
   @media (max-width: 615px) {
     width: 100vw;
@@ -79,6 +79,14 @@
     margin: 0;
     text-align: center;
     grid-template-columns: 1fr 1fr;
+    width: 100vw;
+  }
+  @media (min-width: 615px) and (max-width: 1100px) {
+    display: grid;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100vw;
   }
 }
@@ -163,5 +171,71 @@
     //     padding-right: 0.2rem;
     //   }
     // }
+  }
+}
+
+.connect-background {
+  height: 137vh;
+  @media (min-width: 200px) and (max-width: 300px) {
+    height: 130vh;
+  }
+  @media (min-width: 300px) and (max-width: 325px) {
+    height: 150vh;
+  }
+  @media (min-width: 325px) and (max-width: 370px) {
+    height: 135vh;
+  }
+  @media (min-width: 370px) and (max-width: 380px) {
+    height: 123vh;
+  }
+  @media (min-width: 380px) and (max-width: 400px) {
+    height: 150vh;
+  }
+  @media (min-width: 400px) and (max-width: 430px) {
+    height: 112vh;
+  }
+  @media (min-width: 500px) and (max-width: 700px) {
+    height: 125vh;
+  }
+  @media (min-width: 700px) and (max-width: 1000px) {
+    height: 108vh;
+  }
+  @media (min-width: 1000px) and (max-width: 1200px) {
+    height: 70vh;
+  }
+}
+
+.connect-greeting {
+  @media (min-width: 200px) and (max-width: 430px) {
+    transform: translateY(15px);
+    width: 80vw;
+  }
+  @media (min-width: 500px) and (max-width: 550px) {
+    transform: translateY(5px);
+  }
+  @media (min-width: 700px) and (max-width: 1200px) {
+    transform: translateY(-5px);
+  }
+}
+.home-connect {
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translateX(290px) translateY(-40px);
+    width: 80vw;
+  }
+  @media (min-width: 300px) and (max-width: 350px) {
+    transform: translateX(340px) translateY(-10px);
+    width: 80vw;
+  }
+  @media (min-width: 350px) and (max-width: 430px) {
+    transform: translateY(-15px) translateX(240px);
+  }
+  @media (min-width: 500px) and (max-width: 550px) {
+    transform: translateY(-15px) translateX(300px);
+  }
+  @media (min-width: 700px) and (max-width: 1000px) {
+    transform: translateY(-5px) translateX(580px);
+  }
+  @media (min-width: 1000px) and (max-width: 1200px) {
+    transform: translateY(-5px) translateX(850px);
   }
 }

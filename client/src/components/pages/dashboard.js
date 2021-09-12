@@ -27,8 +27,8 @@ class Dashboard extends Component {
           <TypingEffect
             messages={[
               "You have arrived to AstralServers.",
-              "You have a few decisions to make today, as always.",
-              "Please, check to make sure you have not left anything upon exiting.",
+              "There are a few decisions to make today, as always.",
+              "Please, do not leave any items when you exit.",
               "Have a great stay. (^-^)/",
             ]}
             cursor="|"

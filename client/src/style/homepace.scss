@@ -3,20 +3,23 @@
   float: right;
   transform: translateY(22px);
   @media (min-width: 250px) and (max-width: 290px) {
-    transform: translateX(10px) translateY(120px);
+    transform: translateX(-80px) translateY(35px);
   }
   @media (min-width: 290px) and (max-width: 350px) {
-    transform: translateX(10px) translateY(100px);
+    transform: translateX(-75px) translateY(20px);
   }
-  @media (min-width: 350px) and (max-width: 490px) {
-    transform: translateX(8px) translateY(80px);
+  @media (min-width: 350px) and (max-width: 400px) {
+    transform: translateX(-84px) translateY(20px);
+  }
+  @media (min-width: 400px) and (max-width: 490px) {
+    transform: translateX(-50px) translateY(20px);
   }
 
   @media (min-width: 490px) and (max-width: 700px) {
-    transform: translateX(10px) translateY(50px);
+    transform: translateX(-68px) translateY(20px);
   }
   @media (min-width: 700px) and (max-width: 1200px) {
-    transform: translateX(-10px) translateY(100px);
+    transform: translateX(-10px) translateY(40px);
   }
 }
 
