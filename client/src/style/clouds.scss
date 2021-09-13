@@ -3,6 +3,9 @@
   height: 83.9vh;
   width: 100vw;
   overflow: hidden;
+  @media (min-width: 200px) and (max-width: 1220px) {
+    height: 94.5vh;
+  }
 }
 .cloud {
   margin-top: 150px;
