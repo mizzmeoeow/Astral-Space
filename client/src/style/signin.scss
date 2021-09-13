@@ -143,11 +143,14 @@ button {
   @media (min-width: 780px) and (max-width: 1000px) {
     transform: translateX(-190px) translateY(200px);
   }
+  @media (min-width: 374px) and (max-height: 812px) {
+    transform: translateX(-250px) translateY(-80px);
+  }
   @media (min-width: 1000px) and (max-width: 1100px) {
     transform: translateX(-100px) translateY(300px);
   }
-  // @media (min-width: 1100px) and (max-width: 2500px) {
-  //   transform: translateX(-80px) translateY(400px);
+  // @media (min-height: 810px) and (max-height: 830px) {
+  //   transform: translateX(-180px) translateY(-100px);
   // }
 }
 
