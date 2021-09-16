@@ -30,54 +30,46 @@ router.post("/register", async (req, res, next) => {
 });
 
 //LOGIN
-router.post("/login", (req, res) => {
-  const { errors, isValid } = validateLoginInput(req.body);
-  console.log(isValid);
-  if (!isValid) {
-    return res.status(400).json({ errors });
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ msg: "Please enter all fields" });
   }
 
-  const email = req.body.email;
-  const password = req.body.password;
+  try {
+    const user = await User.findOne({ email });
+    if (!user) throw Error("User does not exist");
 
-  User.findOne({ email }).then((user) => {
-    if (!user) {
-      errors.email = "User not found";
-      return res.status(404).json({ errors });
-    }
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) throw Error("Invalid credentials");
 
-    bcrypt.compare(password, user.password).then((isMatch) => {
-      //returns a bool values in isMatch
-      if (isMatch) {
-        //User matched
-        const payload = {
-          id: user._id,
-          username: user.username,
-          // admin: user.admin,
-          profilePic: user.profilePic,
-        };
-
-        jwt.sign(
-          payload,
-          config.JWT_SECRET,
-          { expiresIn: config.tokenLife },
-          (err, token) => {
-            return res.json({
-              success: true,
-              token: "Bearer " + token,
-              httpOnly: true,
-              secure: true,
-              sameSite: true,
-            });
-          }
-        );
-      } else {
-        //Incorrect Password
-        errors.password = "Invalid Login Credentials";
-        return res.status(400).json({ errors, token: null, success: false });
-      }
+    const token = jwt.sign({ id: user._id }, config.JWT_SECRET, {
+      expiresIn: config.tokenLife,
     });
-  });
+    if (!token) throw Error("Couldnt sign the token");
+
+    res.status(200).json({
+      token,
+      user: {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        profilePic: user.profilePic,
+
+        auth: true,
+        msg: "Login Successful",
+        httpOnly: true,
+        secure: true,
+        success: true,
+        token: "Bearer " + token,
+
+        sameSite: true,
+      },
+    });
+  } catch (e) {
+    res.status(400).json({ msg: e.message });
+  }
 });
 
 router.get("/secure", (req, res) => {

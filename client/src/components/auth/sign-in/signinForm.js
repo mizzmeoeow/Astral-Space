@@ -4,8 +4,6 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { loginUser } from "../../../actions/actionAuth";
 import { Redirect } from "react-router-dom";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -14,24 +12,28 @@ class LoginForm extends Component {
       email: "",
       password: "",
       submitted: false,
-      errors: "",
+      errorText: "",
     };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    try {
+      this.setState({ error: false });
+    } catch (error) {
+      alert("you have entered the wrong credentials, bring try again.");
+    }
   }
 
   componentDidUpdate(props) {
     if (props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
-
-    if (props.errors) {
-      return {
-        errors: props.errors,
-      };
-    }
   }
 
   onChange = (e) => {
-    this.setState({ [e.target.id]: e.target.value });
+    this.setState({ [e.target.id]: e.target.value, errorText: "" });
   };
 
   onSubmit = (e) => {
@@ -46,71 +48,72 @@ class LoginForm extends Component {
   };
 
   render() {
-    const { errors } = this.state;
     if (this.props.auth.isAuthenticated) return <Redirect to="/dashboard" />;
-    else
-      return (
-        <div id="login">
-          <div className="sign-in-form">
-            <div className="input-group">
-              <form onSubmit={this.onSubmit}>
-                <div className="error-text">{this.state.errors}</div>
+    return (
+      <div id="login">
+        <div className="sign-in-form">
+          <div className="input-group">
+            <div className="error-text">{this.state.errorText}</div>
 
+            <form onSubmit={this.onSubmit}>
+              <input
+                className="login-input"
+                type="email"
+                id="email"
+                name="email"
+                error={this.state.errorText}
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.onChange}
+                autoComplete="none"
+                required
+              />
+
+              <div>
                 <input
                   className="login-input"
-                  type="email"
-                  id="email"
-                  name="email"
-                  error={this.state.errors}
-                  placeholder="Email"
-                  value={this.state.email}
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
                   onChange={this.onChange}
+                  value={this.state.password}
+                  error={this.state.errorText}
                   autoComplete="none"
                   required
                 />
+              </div>
+              <div className="">
+                <button className="login-btn" type="submit">
+                  Launch
+                </button>
 
-                <div>
-                  <input
-                    className="login-input"
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Password"
-                    onChange={this.onChange}
-                    value={this.state.password}
-                    error={errors.password}
-                    autoComplete="none"
-                    required
-                  />
-                </div>
-                <div className="">
-                  <Popup
-                    trigger={
-                      <button className="login-btn" type="submit">
-                        Launch
-                      </button>
-                    }
-                    position="center"
+                <a href="/">
+                  <button
+                    onClick={this.handleClick}
+                    type="button"
+                    className="back-btn"
                   >
-                    <div>
-                      If this pop up stays on your screen, you have entered a
-                      wrong email or password, please try again or register
-                      again. I apologize for the inconvenience, I am working on
-                      password retrieval...
-                    </div>
-                  </Popup>
-
-                  <a href="/">
-                    <button type="button" className="back-btn">
-                      Go Back
-                    </button>
-                  </a>
-                </div>
-              </form>
-            </div>
+                    Go Back
+                  </button>
+                </a>
+              </div>
+              {/* <div>
+                <p
+                  aria-atomic="true"
+                  data-testid="login-error-message"
+                  id="slfErrorAlert"
+                  role="alert"
+                >
+                  Sorry, your email or password was incorrect. Please
+                  double-check your credentials.
+                </p>
+              </div> */}
+            </form>
           </div>
         </div>
-      );
+      </div>
+    );
   }
 }
 

@@ -75,10 +75,6 @@
   border-radius: 50%;
   margin-right: 5px;
   transform: translateY(-30px) translateX(110px);
-  // @media (max-width: 615px) {
-  //   transform: translateX(-60px);
-  //   width: 7vw;
-  // }
   @media (min-width: 250px) and (max-width: 290px) {
     transform: translateX(-43px) translateY(-4px);
     width: 7vw;
@@ -117,9 +113,17 @@
 
 .singlePostImg {
   width: 90vw;
-  height: 100vh;
+  height: 50vh;
   border-radius: 5px;
   object-fit: cover;
+  @media (min-width: 200px) and (max-width: 420px) {
+    height: 40vh;
+    width: 80vw;
+  }
+  @media (min-width: 1000px) and (max-width: 1200px) {
+    height: 40vh;
+    width: 94vw;
+  }
 }
 
 .singlePostTitle {
@@ -178,14 +182,14 @@
 }
 
 .singlePostAuthor {
-  transform: translateY(5px);
+  transform: translateY(-35px);
   @media (max-width: 615px) {
     transform: translateX(-2px);
   }
 }
 
 .singlePostDate {
-  transform: translateY(5px);
+  transform: translateY(-35px);
   @media (max-width: 615px) {
     transform: translateX(5px) translateY(2px);
   }
@@ -209,21 +213,31 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-// *::-webkit-scrollbar-track {
-//   background: rgba(0, 0, 0, 0.2);
-// }
-
 .editModeTitle {
-  transform: translateX(95px) translateY(12px);
+  width: 52vw;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid lightgray;
+  transform: translateX(340px) translateY(35px);
 }
 
 .editModeBody {
-  height: 100vh;
-  transform: translateX(-80px);
+  height: 20vh;
+  transform: translate(140px, 10px);
+  font-size: 1rem;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 60vw;
+  background: transparent;
+  border: 2px solid lightgray;
 }
 
 .editModeButton {
-  transform: translateY(-70px);
+  transform: translate(240px, -45px);
   @media (max-width: 615px) {
     transform: translateX(300px) translateY(-90px);
   }

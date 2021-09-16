@@ -1,5 +1,6 @@
 import {
   GET_ERRORS,
+  REMOVE_ERROR,
   SET_CURRENT_USER,
   USER_LOADING,
   UPDATE_START,
@@ -50,6 +51,15 @@ export const loginUser = (userData) => (dispatch) => {
       })
     );
 };
+
+export const authError = (e) => ({
+  type: GET_ERRORS,
+  payload: e,
+});
+
+export const removeError = () => ({
+  type: REMOVE_ERROR,
+});
 
 // export const roleChange = (role) => {
 //   return {

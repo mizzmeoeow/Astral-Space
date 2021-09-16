@@ -53,7 +53,7 @@ function SinglePost(props) {
           <input
             type="text"
             value={title}
-            className="writeInput writeTitle editModeTitle"
+            className="editModeTitle"
             autoFocus
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -90,7 +90,7 @@ function SinglePost(props) {
         </div>
         {updateMode ? (
           <textarea
-            className="writeInput editModeBody"
+            className="editModeBody"
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
           />

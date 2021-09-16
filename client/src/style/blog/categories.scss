@@ -8,6 +8,24 @@
   p::first-letter {
     font-size: 80px;
   }
+  @media (min-width: 300px) and (max-width: 370px) {
+    height: 12vh;
+  }
+  @media (min-width: 370px) and (max-width: 400px) {
+    height: 15vh;
+  }
+  @media (min-width: 400px) and (max-width: 420px) {
+    height: 15vh;
+  }
+  @media (min-width: 500px) and (max-width: 820px) {
+    height: 16vh;
+  }
+  @media (max-width: 400px) and (min-height: 800px) {
+    height: 10vh;
+  }
+  @media (min-width: 1000px) and (max-width: 1220px) {
+    height: 16vh;
+  }
 }
 
 .addImage {

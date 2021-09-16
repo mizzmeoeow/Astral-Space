@@ -4,12 +4,12 @@ class MusicHeader extends Component {
   render() {
     return (
       <div className="category-header">
-        <p className="category-heading">Music</p>
+        <p className="connect-header">Music</p>
         <div className="navbar">
-          <a href="/dashboard" className="nav-connect">
+          <a href="/dashboard" className="nav-connect cat-nav">
             Home Space
           </a>
-          <a href="/connect" className="nav-connect">
+          <a href="/connect" className="nav-connect cat-nav">
             Connect
           </a>
         </div>

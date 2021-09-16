@@ -5,6 +5,10 @@
   font-weight: 600;
   font-size: 1.25rem;
 
+  // @media (min-width: 300px) and (max-width: 300px) {
+  //   transform: translateX(-448px);
+  // }
+
   grid-template-rows:
     [signin-s] 64px [signin-e register-s] 64px [register-e shop-s] minmax(
       20px,
@@ -13,9 +17,9 @@
     [shop-e];
   grid-template-columns: 1fr;
 
-  // @media (max-width: 615px) {
-  //   transform: translateX(50px);
-  // }
+  @media (max-width: 615px) {
+    transform: translateX(50px);
+  }
 
   a {
     text-decoration: none;
