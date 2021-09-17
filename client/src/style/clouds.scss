@@ -5,21 +5,25 @@
   overflow: hidden;
 
   @media (min-width: 200px) and (max-width: 360px) {
-    height: 95vh;
+    height: 88vh;
   }
   @media (min-width: 360px) and (max-width: 370px) {
-    height: 94vh;
+    height: 96vh;
   }
   @media (min-width: 370px) and (max-width: 400px) {
-    height: 97.5vh;
+    height: 92vh;
   }
+
   @media (min-width: 370px) and (min-height: 800px) {
     height: 93vh;
   }
   @media (min-width: 400px) and (max-width: 500px) {
-    height: 91vh;
+    height: 92vh;
   }
-  @media (min-width: 400px) and (min-height: 800px) {
+  @media (max-width: 420px) and (min-height: 700px) {
+    height: 95.5vh;
+  }
+  @media (min-width: 413px) and (min-height: 800px) {
     height: 94vh;
   }
   @media (min-width: 500px) and (max-width: 1220px) {

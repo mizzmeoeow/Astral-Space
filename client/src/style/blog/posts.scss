@@ -120,6 +120,10 @@
     height: 40vh;
     width: 80vw;
   }
+  @media (min-width: 420px) and (max-width: 550px) {
+    height: 30vh;
+    width: 90vw;
+  }
   @media (min-width: 1000px) and (max-width: 1200px) {
     height: 40vh;
     width: 94vw;
@@ -222,6 +226,29 @@
   background: transparent;
   border: 2px solid lightgray;
   transform: translateX(340px) translateY(35px);
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translate(10px, 90px);
+    width: 35vw;
+  }
+  @media (min-width: 300px) and (max-width: 400px) {
+    transform: translate(30px, 70px);
+    width: 35vw;
+  }
+  @media (min-width: 400px) and (max-width: 450px) {
+    transform: translate(40px, 80px);
+    width: 35vw;
+  }
+  @media (min-width: 450px) and (max-width: 550px) {
+    transform: translate(80px, 80px);
+    width: 41vw;
+  }
+  @media (min-width: 700px) and (max-width: 850px) {
+    transform: translate(120px, 60px);
+    width: 40vw;
+  }
+  @media (min-width: 850px) and (max-width: 1250px) {
+    transform: translate(170px, 65px);
+  }
 }
 
 .editModeBody {
@@ -234,12 +261,56 @@
   width: 60vw;
   background: transparent;
   border: 2px solid lightgray;
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translate(5px, 50px);
+    width: 70vw;
+  }
+  @media (min-width: 300px) and (max-width: 370px) {
+    transform: translate(30px, 50px);
+  }
+  @media (min-width: 370px) and (max-width: 380px) {
+    transform: translate(-55px, 50px);
+  }
+  @media (min-width: 400px) and (max-width: 450px) {
+    transform: translate(-50px, 60px);
+  }
+  @media (min-width: 450px) and (max-width: 550px) {
+    transform: translate(-10px, 60px);
+  }
+  @media (min-width: 700px) and (max-width: 850px) {
+    transform: translate(10px, 40px);
+  }
+
+  @media (min-width: 850px) and (max-width: 1250px) {
+    transform: translate(80px, 55px);
+  }
 }
 
 .editModeButton {
   transform: translate(240px, -45px);
-  @media (max-width: 615px) {
-    transform: translateX(300px) translateY(-90px);
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translate(133px, -165px);
+  }
+  @media (min-width: 300px) and (max-width: 370px) {
+    transform: translate(180px, -160px);
+  }
+  @media (min-width: 370px) and (max-width: 380px) {
+    transform: translate(190px, -6px);
+  }
+  @media (max-width: 380px) and (max-height: 600px) {
+    transform: translate(170px, -148px);
+  }
+  @media (min-width: 400px) and (max-width: 450px) {
+    transform: translate(210px, 5px);
+  }
+  @media (min-width: 450px) and (max-width: 550px) {
+    transform: translate(330px, 3px);
+  }
+  @media (min-width: 700px) and (max-width: 850px) {
+    transform: translate(460px, -18px);
+  }
+  @media (min-width: 850px) and (max-width: 1250px) {
+    transform: translate(730px, -8px);
   }
 }
 

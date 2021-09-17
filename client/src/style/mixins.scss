@@ -20,7 +20,10 @@
   p {
     grid-row: p-s/p-e;
     transform: translateX(200px);
-    @media (max-width: 615px) {
+    @media (min-width: 200px) and (max-width: 305px) {
+      transform: translateX(5px);
+    }
+    @media (min-width: 300px) and (max-width: 615px) {
       transform: translateX(20px);
     }
   }

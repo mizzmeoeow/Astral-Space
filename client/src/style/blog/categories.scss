@@ -4,9 +4,13 @@
   font-family: "Tangerine", cursive;
   background-color: black;
   color: white;
+  border: 0 !important;
 
   p::first-letter {
     font-size: 80px;
+  }
+  @media (min-width: 200px) and (max-width: 360px) {
+    height: 17.75vh;
   }
   @media (min-width: 300px) and (max-width: 370px) {
     height: 12vh;

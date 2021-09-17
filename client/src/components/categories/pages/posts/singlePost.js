@@ -9,15 +9,15 @@ function SinglePost(props) {
   const [post, setPost] = useState({});
   const user = props.user;
   const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
-  const [updateMode, setUpdateMode] = useState(false);
+  // const [desc, setDesc] = useState("");
+  // const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
-      setDesc(res.data.desc);
+      // setDesc(res.data.desc);
     };
     getPost();
   }, [path]);
@@ -31,17 +31,17 @@ function SinglePost(props) {
     } catch (err) {}
   };
 
-  const handleUpdate = async () => {
-    try {
-      await axios.put(`posts/${post._id}`, {
-        username: user.username,
-        title,
-        desc,
-      });
+  // const handleUpdate = async () => {
+  //   try {
+  //     await axios.put(`posts/${post._id}`, {
+  //       username: user.username,
+  //       title,
+  //       desc,
+  //     });
 
-      setUpdateMode(false);
-    } catch (err) {}
-  };
+  //     setUpdateMode(false);
+  //   } catch (err) {}
+  // };
 
   return (
     <div className="singlePost">
@@ -49,7 +49,7 @@ function SinglePost(props) {
         {post.photo && (
           <img src={`/images/${post.photo}`} alt="" className="singlePostImg" />
         )}
-        {updateMode ? (
+        {/* {updateMode ? (
           <input
             type="text"
             value={title}
@@ -57,23 +57,23 @@ function SinglePost(props) {
             autoFocus
             onChange={(e) => setTitle(e.target.value)}
           />
-        ) : (
-          <h1 className="singlePostTitle">
-            {title}
-            {post.username === user?.username && (
-              <div className="singlePostEdit">
-                <i
+        ) : ( */}
+        <h1 className="singlePostTitle">
+          {title}
+          {post.username === user?.username && (
+            <div className="singlePostEdit">
+              {/* <i
                   className="singlePostIcon far fa-edit"
                   onClick={() => setUpdateMode(true)}
-                ></i>
-                <i
-                  className="singlePostIcon far fa-trash-alt"
-                  onClick={handleDelete}
-                ></i>
-              </div>
-            )}
-          </h1>
-        )}
+                ></i> */}
+              <i
+                className="singlePostIcon far fa-trash-alt"
+                onClick={handleDelete}
+              ></i>
+            </div>
+          )}
+        </h1>
+        {/* )} */}
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
             Author:
@@ -88,23 +88,23 @@ function SinglePost(props) {
             {new Date(post.createdAt).toDateString()}
           </span>
         </div>
-        {updateMode ? (
-          <textarea
-            className="editModeBody"
-            value={desc}
-            onChange={(e) => setDesc(e.target.value)}
-          />
-        ) : (
-          <p className="singlePostDesc">{post.body}</p>
-        )}
-        {updateMode && (
+        {/* {updateMode ? ( */}
+        {/* <textarea
+          className="editModeBody"
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
+        /> */}
+        {/* ) : ( */}
+        <p className="singlePostDesc">{post.body}</p>
+        {/* )} */}
+        {/* {updateMode && (
           <button
             className="singlePostButton editModeButton"
             onClick={handleUpdate}
           >
             Update
           </button>
-        )}
+        )} */}
       </div>
     </div>
   );
