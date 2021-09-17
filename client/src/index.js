@@ -34,7 +34,10 @@ axios.interceptors.response.use(
   },
   (error) => {
     console.log(error.response);
-    return Promise.reject(error);
+
+    return Promise.reject(
+      alert("Sorry, you entered the wrong email or password, please try again.")
+    );
   }
 );
 

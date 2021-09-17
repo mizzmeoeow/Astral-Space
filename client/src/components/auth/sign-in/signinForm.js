@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { loginUser } from "../../../actions/actionAuth";
 import { Redirect } from "react-router-dom";
+import classnames from "classnames";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -12,28 +13,14 @@ class LoginForm extends Component {
       email: "",
       password: "",
       submitted: false,
-      errorText: "",
+      errors: false,
+      loading: false,
+      message: "",
     };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    try {
-      this.setState({ error: false });
-    } catch (error) {
-      alert("you have entered the wrong credentials, bring try again.");
-    }
-  }
-
-  componentDidUpdate(props) {
-    if (props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
-    }
   }
 
   onChange = (e) => {
-    this.setState({ [e.target.id]: e.target.value, errorText: "" });
+    this.setState({ [e.target.id]: e.target.value, errors: "" });
   };
 
   onSubmit = (e) => {
@@ -48,20 +35,27 @@ class LoginForm extends Component {
   };
 
   render() {
+    const { errors } = this.state;
+
     if (this.props.auth.isAuthenticated) return <Redirect to="/dashboard" />;
     return (
       <div id="login">
         <div className="sign-in-form">
           <div className="input-group">
-            <div className="error-text">{this.state.errorText}</div>
-
+            <div className="error-text">{this.state.error}</div>
             <form onSubmit={this.onSubmit}>
+              <span className="red-text">
+                {errors.email}
+                {errors.emailnotfound}
+              </span>
               <input
-                className="login-input"
+                className={classnames("login-input", {
+                  invalid: errors.email || errors.emailnotfound,
+                })}
                 type="email"
                 id="email"
                 name="email"
-                error={this.state.errorText}
+                error={errors.email}
                 placeholder="Email"
                 value={this.state.email}
                 onChange={this.onChange}
@@ -71,17 +65,23 @@ class LoginForm extends Component {
 
               <div>
                 <input
-                  className="login-input"
+                  className={classnames("login-input", {
+                    invalid: errors.password || errors.passwordincorrect,
+                  })}
                   type="password"
                   id="password"
                   name="password"
                   placeholder="Password"
                   onChange={this.onChange}
                   value={this.state.password}
-                  error={this.state.errorText}
+                  error={errors.password}
                   autoComplete="none"
                   required
                 />
+                <span className="red-text">
+                  {errors.password}
+                  {errors.passwordincorrect}
+                </span>
               </div>
               <div className="">
                 <button className="login-btn" type="submit">
@@ -89,26 +89,11 @@ class LoginForm extends Component {
                 </button>
 
                 <a href="/">
-                  <button
-                    onClick={this.handleClick}
-                    type="button"
-                    className="back-btn"
-                  >
+                  <button type="button" className="back-btn">
                     Go Back
                   </button>
                 </a>
               </div>
-              {/* <div>
-                <p
-                  aria-atomic="true"
-                  data-testid="login-error-message"
-                  id="slfErrorAlert"
-                  role="alert"
-                >
-                  Sorry, your email or password was incorrect. Please
-                  double-check your credentials.
-                </p>
-              </div> */}
             </form>
           </div>
         </div>

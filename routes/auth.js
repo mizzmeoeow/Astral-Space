@@ -31,7 +31,13 @@ router.post("/register", async (req, res, next) => {
 
 //LOGIN
 router.post("/login", async (req, res) => {
+  const { errors, isValid } = validateLoginInput(req.body);
+
   const { email, password } = req.body;
+
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
 
   if (!email || !password) {
     return res.status(400).json({ msg: "Please enter all fields" });
@@ -39,10 +45,15 @@ router.post("/login", async (req, res) => {
 
   try {
     const user = await User.findOne({ email });
-    if (!user) throw Error("User does not exist");
+    if (!user) {
+      return res
+        .status(400)
+        .json({ msg: "No account with this email has been registered." });
+    }
 
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) throw Error("Invalid credentials");
+    if (!isMatch)
+      return res.statusMessage(400).json({ msg: "Invalid credentials." });
 
     const token = jwt.sign({ id: user._id }, config.JWT_SECRET, {
       expiresIn: config.tokenLife,
@@ -56,19 +67,17 @@ router.post("/login", async (req, res) => {
         username: user.username,
         email: user.email,
         profilePic: user.profilePic,
-
         auth: true,
         msg: "Login Successful",
         httpOnly: true,
         secure: true,
         success: true,
         token: "Bearer " + token,
-
         sameSite: true,
       },
     });
-  } catch (e) {
-    res.status(400).json({ msg: e.message });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
   }
 });
 

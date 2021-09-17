@@ -47,7 +47,6 @@ export const loginUser = (userData) => (dispatch) => {
       dispatch({
         err,
         type: GET_ERRORS,
-        payload: err.response.data,
       })
     );
 };
