@@ -3,6 +3,15 @@
   @media (max-width: 615px) {
     font-size: 10px;
   }
+  @media (min-width: 200px) and (max-width: 305px) {
+    transform: translateX(-430px) translateY(30px);
+  }
+  @media (min-width: 500px) and (max-width: 605px) {
+    transform: translateX(-100px) translateY(100px);
+  }
+  @media (min-width: 700px) and (max-width: 805px) {
+    transform: translateX(-400px) translateY(200px);
+  }
 
   .email {
     transform: translateX(100px);
@@ -41,4 +50,7 @@ textarea {
   font-size: 20px;
   // float: left;
   transform: translateX(-110px) translateY(60px);
+  @media (min-width: 100px) and (max-width: 305px) {
+    font-size: 12px;
+  }
 }

@@ -5,5 +5,5 @@ module.exports = {
   tokenLife: 36000,
   refreshTokenLife: 86400,
   EMAIL: "shannabreaking@gmail.com",
-  PASS: "NoHacKeRs!69",
+  PASS: "StOpHacKerz!2k24",
 };
