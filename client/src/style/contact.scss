@@ -66,4 +66,14 @@ textarea {
   @media (min-width: 100px) and (max-width: 305px) {
     font-size: 12px;
   }
+  @media (min-width: 200px) and (max-width: 359px) {
+    transform: translateX(-70px) translateY(10px);
+    width: 140px;
+    font-size: 12px;
+  }
+  @media (min-width: 360px) and (max-width: 615px) {
+    transform: translateX(110px) translateY(60px);
+    width: 140px;
+    font-size: 12px;
+  }
 }
