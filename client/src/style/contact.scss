@@ -4,7 +4,13 @@
     font-size: 10px;
   }
   @media (min-width: 200px) and (max-width: 305px) {
-    transform: translateX(-430px) translateY(30px);
+    transform: translateX(-230px) translateY(30px);
+  }
+  @media (min-width: 305px) and (max-width: 355px) {
+    transform: translateX(-200px);
+  }
+  @media (min-width: 355px) and (max-width: 415px) {
+    transform: translateX(-190px) translateY(30px);
   }
   @media (min-width: 500px) and (max-width: 605px) {
     transform: translateX(-100px) translateY(100px);
