@@ -4,10 +4,20 @@
   font-family: "Old Standard TT", serif;
   font-weight: 600;
   font-size: 1.25rem;
+  transform: translateX(500px);
 
-  // @media (min-width: 300px) and (max-width: 300px) {
-  //   transform: translateX(-448px);
-  // }
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translateX(50px);
+  }
+  @media (min-width: 300px) and (max-width: 420px) {
+    transform: translateX(100px);
+  }
+  @media (min-width: 500px) and (max-width: 600px) {
+    transform: translateX(200px);
+  }
+  @media (min-width: 700px) and (max-width: 1200px) {
+    transform: translateX(400px);
+  }
 
   grid-template-rows:
     [signin-s] 64px [signin-e register-s] 64px [register-e shop-s] minmax(
@@ -16,10 +26,6 @@
     )
     [shop-e];
   grid-template-columns: 1fr;
-
-  @media (max-width: 615px) {
-    transform: translateX(50px);
-  }
 
   a {
     text-decoration: none;
