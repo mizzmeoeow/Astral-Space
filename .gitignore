@@ -1,6 +1,5 @@
 node_modules/
 config/
 .env
-.config/keys.js
-/keys.js
+./config/
 

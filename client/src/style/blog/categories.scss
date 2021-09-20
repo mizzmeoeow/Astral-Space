@@ -39,11 +39,25 @@
 .writeImg {
   margin-left: 150px;
   width: 80vw;
-  height: 250px;
+  height: 40vh;
   border-radius: 10px;
   object-fit: cover;
-  @media (max-width: 615px) {
-    transform: translateX(-100px);
+
+  @media (min-width: 200px) and (max-width: 290px) {
+    transform: translateX(-120px) translateY(80px);
+    height: 30vh;
+  }
+  @media (min-width: 290px) and (max-width: 490px) {
+    transform: translateX(-120px) translateY(65px);
+    height: 30vh;
+  }
+  @media (min-width: 490px) and (max-width: 690px) {
+    transform: translateX(-100px) translateY(55px);
+    height: 30vh;
+  }
+  @media (min-width: 750px) and (max-width: 1290px) {
+    transform: translateX(-80px) translateY(90px);
+    height: 30vh;
   }
 }
 
@@ -157,9 +171,9 @@
 
 .writeText {
   font-size: 1rem;
-  height: 45vh;
-  @media (min-width: 100px) and (max-width: 300px) {
-    height: 40vh;
+  height: 35vh;
+  @media (min-width: 100px) and (max-width: 620px) {
+    height: 20vh;
   }
 }
 

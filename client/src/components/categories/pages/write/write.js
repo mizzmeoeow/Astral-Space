@@ -17,14 +17,15 @@ export default function Write(props) {
       username: user.username,
     };
     if (file) {
-      const data = new FormData();
+      const element = document.getElementById("image-form");
+      const formData = new FormData(element);
       const filename = file.name;
-      data.append("name", filename);
-      data.append("file", file);
+      formData.append("name", filename);
+      formData.append("file", file);
       newPost.photo = filename;
 
       try {
-        await axios.post("upload", data);
+        await axios.post("upload", formData);
       } catch (err) {}
     }
     try {
@@ -42,7 +43,7 @@ export default function Write(props) {
       {file && (
         <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
       )}
-      <form className="writeForm" onSubmit={handleSubmit}>
+      <form className="writeForm" id="image-form" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
             <i className="writeIcon fas fa-plus addImage">IMG</i>
