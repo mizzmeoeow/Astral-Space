@@ -71,14 +71,14 @@ function ContactForm(props) {
       <br />
       <div className="input-group">
         <label className="textarea-label" htmlFor="input">
-          Please, let me know how I can help you today:
+          How can I help?
         </label>
         <br />
         <textarea
           name="message"
           type="text"
           className="login-input help"
-          placeholder="How can I help?"
+          placeholder="Let me know anything you need help with."
           cols="40"
           rows="6"
           required

@@ -173,13 +173,13 @@ function RegisterForm() {
           name="birthday"
           min="2004-28-05"
           max="2096-28-05"
-          className="login-input"
+          className="login-input birthday-input"
           placeholder="Birthday"
           value={birthday}
           onChange={handleChangeInput}
         />
       </div>
-      <div className="sign-in-form question">
+      <div className="sign-in-form">
         <label htmlFor="question">What art field interests you?</label>
         <input
           autoComplete="off"

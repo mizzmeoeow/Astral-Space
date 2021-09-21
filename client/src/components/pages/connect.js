@@ -11,8 +11,10 @@ class Connect extends Component {
   state = {
     username: "",
   };
+
   render() {
     const { user } = this.props.auth;
+    console.log(user.username);
 
     return (
       <div className="connect-nav">

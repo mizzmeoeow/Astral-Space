@@ -9,9 +9,13 @@ import ProfileNavbar from "../headernavbar/profileNavbar";
 import TypingEffect from "new-react-typing-effect";
 
 class Dashboard extends Component {
-  state = {
-    username: "",
-  };
+  constructor() {
+    super();
+    this.state = {
+      username: "",
+      LogoutModalIsOpen: false,
+    };
+  }
 
   onLogoutClick = (e) => {
     e.preventDefault();
@@ -20,6 +24,7 @@ class Dashboard extends Component {
 
   render() {
     const { user } = this.props.auth;
+    console.log(user);
 
     return (
       <div className="profile-page header">
@@ -53,14 +58,15 @@ class Dashboard extends Component {
             }}
           />
         </div>
-        <button onClick={this.onLogoutClick} className="login-btn logout-btn">
-          Logout
-        </button>
+
         <ProfileNavbar user={user} />
-        <h4 className="greeting">
-          <b>Welcome back,</b> {user.username}, what would you like to say to
-          your fellow creators?
-        </h4>
+        <a
+          href="/"
+          onClick={this.onLogoutClick}
+          className="navbar-links profile-links"
+        >
+          Logout
+        </a>
         <ProfileSpace user={user} />
         <ProfileFooter />
       </div>

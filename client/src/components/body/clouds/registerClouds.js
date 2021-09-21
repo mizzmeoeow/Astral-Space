@@ -53,8 +53,8 @@ class RegisterClouds extends Component {
           <foreignObject
             className="register-fo"
             x="300"
-            y="100"
-            width="470"
+            y="20"
+            width="570"
             height="500"
           >
             <RegisterForm

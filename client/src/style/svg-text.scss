@@ -4,19 +4,22 @@
   font-family: "Old Standard TT", serif;
   font-weight: 600;
   font-size: 1.25rem;
-  transform: translateX(500px);
+  transform: translateX(33rem);
 
   @media (min-width: 200px) and (max-width: 300px) {
-    transform: translateX(50px);
+    transform: translateX(2rem);
   }
   @media (min-width: 300px) and (max-width: 420px) {
-    transform: translateX(100px);
+    transform: translateX(3rem);
   }
   @media (min-width: 500px) and (max-width: 600px) {
-    transform: translateX(200px);
+    transform: translateX(10rem) translateY(3rem);
   }
-  @media (min-width: 700px) and (max-width: 1200px) {
-    transform: translateX(400px);
+  @media (min-width: 700px) and (max-width: 900px) {
+    transform: translateX(16rem) translateY(5rem);
+  }
+  @media (min-width: 900px) and (max-width: 1300px) {
+    transform: translateX(23rem) translateY(8rem);
   }
 
   grid-template-rows:

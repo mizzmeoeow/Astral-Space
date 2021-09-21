@@ -13,10 +13,20 @@ class LoginForm extends Component {
       email: "",
       password: "",
       submitted: false,
-      errors: false,
-      loading: false,
-      message: "",
+      errors: {},
     };
+  }
+
+  componentDidUpdate(props) {
+    if (props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
+
+    if (props.errors) {
+      return {
+        errors: props.errors,
+      };
+    }
   }
 
   onChange = (e) => {

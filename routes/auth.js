@@ -30,55 +30,54 @@ router.post("/register", async (req, res, next) => {
 });
 
 //LOGIN
-router.post("/login", async (req, res) => {
+router.post("/login", (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
-
-  const { email, password } = req.body;
-
+  console.log(isValid);
   if (!isValid) {
-    return res.status(400).json(errors);
+    return res.status(400).json({ errors });
   }
 
-  if (!email || !password) {
-    return res.status(400).json({ msg: "Please enter all fields" });
-  }
+  const email = req.body.email;
+  const password = req.body.password;
 
-  try {
-    const user = await User.findOne({ email });
+  User.findOne({ email }).then((user) => {
     if (!user) {
-      return res
-        .status(400)
-        .json({ msg: "No account with this email has been registered." });
+      errors.email = "User not found";
+      return res.status(401).send({ errors });
     }
 
-    const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch)
-      return res.statusMessage(400).json({ msg: "Invalid credentials." });
+    bcrypt.compare(password, user.password).then((isMatch) => {
+      //returns a bool values in isMatch
+      if (isMatch) {
+        //User matched
+        const payload = {
+          id: user._id,
+          username: user.username,
+          // admin: user.admin,
+          profilePic: user.profilePic,
+        };
 
-    const token = jwt.sign({ id: user._id }, config.JWT_SECRET, {
-      expiresIn: config.tokenLife,
+        jwt.sign(
+          payload,
+          config.JWT_SECRET,
+          { expiresIn: config.tokenLife },
+          (err, token) => {
+            return res.json({
+              success: true,
+              token: "Bearer " + token,
+              httpOnly: true,
+              secure: true,
+              sameSite: true,
+            });
+          }
+        );
+      } else {
+        //Incorrect Password
+        errors.password = "Invalid Login Credentials";
+        return res.status(400).send({ errors, token: null, success: false });
+      }
     });
-    if (!token) throw Error("Couldnt sign the token");
-
-    res.status(200).json({
-      token,
-      user: {
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        profilePic: user.profilePic,
-        auth: true,
-        msg: "Login Successful",
-        httpOnly: true,
-        secure: true,
-        success: true,
-        token: "Bearer " + token,
-        sameSite: true,
-      },
-    });
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
+  });
 });
 
 router.get("/secure", (req, res) => {

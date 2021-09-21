@@ -31,6 +31,7 @@ import store from "./store";
 // import Settings from "./components/categories/pages/settings/settings";
 import Single from "./components/categories/pages/single/single";
 import LoginFormUnsuccess from "./components/auth/login/loginFormUnsuccess";
+// import LogoutModal from "./components/pages/modal/logout-modal";
 
 if (sessionStorage.jwtToken != null) {
   // Set auth token header auth
@@ -39,7 +40,7 @@ if (sessionStorage.jwtToken != null) {
   // Decode token and get user info and exp
   const decoded = jwt_decode(token);
 
-  sessionStorage.setItem("user", JSON.stringify(decoded));
+  sessionStorage.setItem("user", JSON.stringify(token));
   sessionStorage.setItem("userData", JSON.stringify(token));
 
   // Set user and isAuthenticated
@@ -60,13 +61,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      currentUser: null,
+      currentUser: "",
     };
   }
 
   render() {
     const { currentUser } = this.state;
     const { user } = this.state;
+    console.log(this.state);
     return (
       <div className="container">
         <div>
@@ -78,6 +80,7 @@ class App extends Component {
               <Route path="/shop" component={Shop} />
               <Route path="/unsuccess" component={Unsuccess} />
               <Route path="/loginunsuccess" component={LoginFormUnsuccess} />
+              {/* <Route path="/logout-page" component={LogoutModal} /> */}
 
               <Route
                 path="/login"

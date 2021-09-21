@@ -1,33 +1,36 @@
 .background {
   background-size: cover;
-  height: 101vh;
+  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
 
   @media (min-width: 200px) and (max-width: 360px) {
-    height: 88vh;
+    min-height: 91vh;
   }
   @media (min-width: 360px) and (max-width: 370px) {
-    height: 96vh;
+    min-height: 96vh;
   }
   @media (min-width: 370px) and (max-width: 400px) {
-    height: 92vh;
+    min-height: 92vh;
   }
 
   @media (min-width: 370px) and (min-height: 800px) {
-    height: 93vh;
+    min-height: 93vh;
   }
   @media (min-width: 400px) and (max-width: 500px) {
-    height: 92vh;
+    min-height: 92vh;
   }
   @media (max-width: 420px) and (min-height: 700px) {
-    height: 95.5vh;
+    min-height: 95.5vh;
   }
   @media (min-width: 413px) and (min-height: 800px) {
-    height: 94vh;
+    min-height: 94vh;
   }
   @media (min-width: 500px) and (max-width: 1220px) {
-    height: 91vh;
+    min-height: 93vh;
+  }
+  @media (min-width: 1220px) and (max-width: 1400px) {
+    min-height: 85vh;
   }
 }
 .cloud {

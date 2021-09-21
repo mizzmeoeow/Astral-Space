@@ -47,7 +47,8 @@ ReactDOM.render(
       <App />
     </React.StrictMode>
   </Router>,
-  document.getElementById("root")
+  document.getElementById("root"),
+  document.querySelector(".app-wrapper")
 );
 
 serviceWorker.unregister();

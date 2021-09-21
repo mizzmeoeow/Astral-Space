@@ -1,6 +1,5 @@
 import {
   GET_ERRORS,
-  REMOVE_ERROR,
   SET_CURRENT_USER,
   USER_LOADING,
   UPDATE_START,
@@ -31,8 +30,11 @@ export const loginUser = (userData) => (dispatch) => {
     .post("auth/login", userData)
     .then((res) => {
       const { token } = res.data;
-      sessionStorage.setItem("jwtToken", token);
+      sessionStorage.setItem("userData", token);
       sessionStorage.setItem("user", res.data);
+
+      console.log(res.data);
+      console.log(res.data.user.username);
 
       // Set token to Auth header
       setAuthToken(token);
@@ -41,24 +43,29 @@ export const loginUser = (userData) => (dispatch) => {
       // sessionStorage.setItem("userData", JSON.stringify(decoded));
 
       // Set current user
-      dispatch(setCurrentUser(decoded));
+      dispatch(
+        setCurrentUser({
+          id: decoded._id,
+          username: decoded.username,
+        })
+      );
     })
     .catch((err) =>
       dispatch({
-        err,
         type: GET_ERRORS,
+        payload: err.response,
       })
     );
 };
 
-export const authError = (e) => ({
-  type: GET_ERRORS,
-  payload: e,
-});
+// export const authError = (e) => ({
+//   type: GET_ERRORS,
+//   payload: e,
+// });
 
-export const removeError = () => ({
-  type: REMOVE_ERROR,
-});
+// export const removeError = () => ({
+//   type: REMOVE_ERROR,
+// });
 
 // export const roleChange = (role) => {
 //   return {

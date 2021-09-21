@@ -24,7 +24,7 @@ class SignIn extends Component {
   render() {
     return (
       <div className="header sign-in">
-        <p className="sign-in-page">Sign In</p>
+        <p className="sign-in-page">Login</p>
         <div>
           {this.props.children}
 

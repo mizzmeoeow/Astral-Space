@@ -43,6 +43,7 @@ function SinglePost(props) {
   //   } catch (err) {}
   // };
 
+  console.log(user.username);
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">

@@ -40,10 +40,6 @@ export const Context = createContext(initialState);
 export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
 
-  // useEffect(() => {
-  //   sessionStorage.setItem("user", JSON.parse(state.user));
-  // }, [state.user]);
-
   return (
     <Context.Provider
       value={{

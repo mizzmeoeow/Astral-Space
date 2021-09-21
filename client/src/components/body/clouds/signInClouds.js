@@ -36,9 +36,9 @@ class SignInClouds extends Component {
           <rect width="100%" height="100%" filter="url(#filter)" />
           <foreignObject
             className="sign-in-fo"
-            x="110"
+            x="10"
             y="180"
-            width="700"
+            width="800"
             height="300"
           >
             <SignInForm className="sign-in__form" />

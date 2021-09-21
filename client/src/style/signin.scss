@@ -15,29 +15,32 @@
     transform: translate(-100px, 0px);
     align-items: center;
   }
+
   @media (min-width: 1100px) and (max-width: 1200px) {
     font-size: 1.75rem;
   }
 
   .register-btn {
-    transform: translateX(220px);
-    @media (max-width: 615px) {
-      transform: translateX(-90px) translateY(20px);
+    transform: translateX(14.1rem);
+    @media (max-width: 515px) {
+      transform: translateX(-6rem) translateY(20px);
+    }
+    @media (min-width: 515px) and (max-width: 600px) {
+      transform: translateX(-6rem) translateY(15px);
     }
   }
 
   .birthday {
-    transform: translateX(-47px);
     @media (max-width: 615px) {
       transform: translateX(-100px);
     }
   }
   .question {
-    transform: translateX(110px);
+    // transform: translateX(50px);
 
-    @media (min-width: 200px) and (max-width: 550px) {
-      transform: translateX(-48px);
-    }
+    // @media (min-width: 200px) and (max-width: 550px) {
+    //   transform: translateX(-30px);
+    // }
   }
 
   button {
@@ -94,6 +97,34 @@
   }
 }
 
+.birthday-input {
+  width: 18vw;
+  @media (min-width: 200px) and (max-width: 300px) {
+    width: 87vw;
+  }
+  @media (min-width: 300px) and (max-width: 460px) {
+    width: 60vw;
+  }
+  @media (min-width: 460px) and (max-width: 600px) {
+    width: 45vw;
+  }
+  @media (min-width: 700px) and (max-width: 860px) {
+    width: 31vw;
+  }
+  @media (min-width: 860px) and (max-width: 1260px) {
+    width: 23.8vw;
+  }
+  @media (min-width: 1260px) and (max-width: 1400px) {
+    width: 18vw;
+  }
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    width: 16vw;
+  }
+  @media (min-width: 1600px) and (max-width: 2000px) {
+    width: 12.7vw;
+  }
+}
+
 button {
   border: 2px solid #008cba;
 
@@ -122,29 +153,38 @@ button {
 
 .register-fo {
   @media (min-width: 200px) and (max-width: 300px) {
-    transform: translateX(-305px);
+    transform: translateX(-26rem) translateY(3rem);
   }
 
-  @media (min-width: 300px) and (max-width: 360px) {
-    transform: translateX(-270px) translateY(-50px);
+  @media (min-width: 300px) and (max-width: 359px) {
+    transform: translateX(-24rem) translateY(2rem);
   }
-  @media (min-width: 361px) and (max-width: 400px) {
-    transform: translateX(-270px) translateY(-50px);
+  @media (min-width: 360px) and (max-width: 400px) {
+    transform: translateX(-23rem) translateY(3rem);
   }
   @media (min-width: 400px) and (max-width: 520px) {
-    transform: translateX(-250px) translateY(20px);
+    transform: translateX(-21rem) translateY(4rem);
   }
   @media (min-width: 520px) and (max-width: 700px) {
-    transform: translateX(-180px);
+    transform: translateX(-17rem) translateY(4rem);
   }
   @media (min-width: 700px) and (max-width: 780px) {
-    transform: translateX(-240px) translateY(200px);
+    transform: translateX(-16rem) translateY(20rem);
   }
   @media (min-width: 780px) and (max-width: 1000px) {
     transform: translateX(-190px) translateY(200px);
   }
   @media (min-width: 1000px) and (max-width: 1100px) {
-    transform: translateX(-100px) translateY(300px);
+    transform: translateX(-8rem) translateY(25rem);
+  }
+  @media (min-width: 1100px) and (max-width: 1400px) {
+    transform: translateX(2rem) translateY(8rem);
+  }
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    transform: translateX(10rem) translateY(12rem);
+  }
+  @media (min-width: 1600px) and (max-width: 2000px) {
+    transform: translateX(14rem) translateY(20rem);
   }
 }
 
@@ -152,8 +192,11 @@ button {
   @media (min-width: 200px) and (max-width: 300px) {
     transform: translateX(-455px);
   }
-  @media (min-width: 300px) and (max-width: 400px) {
-    transform: translateX(-430px);
+  @media (min-width: 301px) and (max-width: 360px) {
+    transform: translateX(-27rem);
+  }
+  @media (min-width: 359px) and (max-width: 400px) {
+    transform: translateX(-25rem);
   }
   @media (min-width: 400px) and (max-width: 520px) {
     transform: translateX(-390px);
@@ -166,5 +209,11 @@ button {
   }
   @media (min-width: 800px) and (max-width: 1100px) {
     transform: translateX(-200px) translateY(300px);
+  }
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    transform: translateX(5rem) translateY(2rem);
+  }
+  @media (min-width: 1600px) and (max-width: 2000px) {
+    transform: translateX(15rem) translateY(15rem);
   }
 }
