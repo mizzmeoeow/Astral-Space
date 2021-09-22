@@ -40,7 +40,7 @@ if (sessionStorage.jwtToken != null) {
   // Decode token and get user info and exp
   const decoded = jwt_decode(token);
 
-  sessionStorage.setItem("user", JSON.stringify(token));
+  sessionStorage.setItem("user", JSON.stringify(decoded));
   sessionStorage.setItem("userData", JSON.stringify(token));
 
   // Set user and isAuthenticated
@@ -61,14 +61,13 @@ class App extends Component {
     super(props);
 
     this.state = {
-      currentUser: "",
+      currentUser: null,
     };
   }
 
   render() {
     const { currentUser } = this.state;
     const { user } = this.state;
-    console.log(this.state);
     return (
       <div className="container">
         <div>
@@ -94,23 +93,46 @@ class App extends Component {
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 {/* <PrivateRoute path="/settings" exact component={Settings} /> */}
                 <PrivateRoute path="/connect" component={Connect} user={user} />
-                <PrivateRoute path="/literature" exact component={Literature} />
+                <PrivateRoute
+                  path="/literature"
+                  exact
+                  component={Literature}
+                  user={user}
+                />
 
                 <PrivateRoute
                   path="/architecture"
                   component={Architecture}
                   render={() => <Architecture user={user} />}
                 />
-                <PrivateRoute path="/Cinema" exact component={Cinema} />
-                <PrivateRoute path="/GraphicDesign" component={GraphicDesign} />
-                <PrivateRoute path="/Music" component={Music} />
-                <PrivateRoute path="/Painting" component={Painting} />
+                <PrivateRoute
+                  path="/Cinema"
+                  exact
+                  component={Cinema}
+                  user={user}
+                />
+                <PrivateRoute
+                  path="/GraphicDesign"
+                  component={GraphicDesign}
+                  user={user}
+                />
+                <PrivateRoute path="/Music" component={Music} user={user} />
+                <PrivateRoute
+                  path="/Painting"
+                  component={Painting}
+                  user={user}
+                />
                 <PrivateRoute
                   path="/PerformingArts"
                   component={PerformingArts}
+                  user={user}
                 />
-                <PrivateRoute path="/Sculpting" component={Sculpting} />
-                <Route path="/post/:postId">
+                <PrivateRoute
+                  path="/Sculpting"
+                  component={Sculpting}
+                  user={user}
+                />
+                <Route path="/post/:postId" user={user}>
                   <Single />
                 </Route>
               </Switch>

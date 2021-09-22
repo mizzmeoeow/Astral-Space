@@ -33,9 +33,6 @@ export const loginUser = (userData) => (dispatch) => {
       sessionStorage.setItem("jwtToken", token);
       sessionStorage.setItem("user", res.data);
 
-      console.log(res.data);
-      console.log(res.data.user.username);
-
       // Set token to Auth header
       setAuthToken(token);
       // Decode token to get user data
@@ -47,6 +44,7 @@ export const loginUser = (userData) => (dispatch) => {
     })
     .catch((err) =>
       dispatch({
+        err,
         type: GET_ERRORS,
         payload: err,
       })

@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { loginUser } from "../../../actions/actionAuth";
 import { Redirect } from "react-router-dom";
-import classnames from "classnames";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -30,7 +29,7 @@ class LoginForm extends Component {
   }
 
   onChange = (e) => {
-    this.setState({ [e.target.id]: e.target.value, errors: "" });
+    this.setState({ [e.target.id]: e.target.value });
   };
 
   onSubmit = (e) => {
@@ -54,14 +53,8 @@ class LoginForm extends Component {
           <div className="input-group">
             <div className="error-text">{this.state.error}</div>
             <form onSubmit={this.onSubmit}>
-              <span className="red-text">
-                {errors.email}
-                {errors.emailnotfound}
-              </span>
               <input
-                className={classnames("login-input", {
-                  invalid: errors.email || errors.emailnotfound,
-                })}
+                className="login-input"
                 type="email"
                 id="email"
                 name="email"
@@ -75,9 +68,7 @@ class LoginForm extends Component {
 
               <div>
                 <input
-                  className={classnames("login-input", {
-                    invalid: errors.password || errors.passwordincorrect,
-                  })}
+                  className="login-input"
                   type="password"
                   id="password"
                   name="password"
@@ -88,10 +79,6 @@ class LoginForm extends Component {
                   autoComplete="none"
                   required
                 />
-                <span className="red-text">
-                  {errors.password}
-                  {errors.passwordincorrect}
-                </span>
               </div>
               <div className="">
                 <button className="login-btn" type="submit">

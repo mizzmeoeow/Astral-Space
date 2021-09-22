@@ -24,7 +24,7 @@ class Dashboard extends Component {
 
   render() {
     const { user } = this.props.auth;
-    console.log(user);
+    // console.log(user);
 
     return (
       <div className="profile-page header">

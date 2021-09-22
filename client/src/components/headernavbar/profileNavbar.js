@@ -1,8 +1,7 @@
 import React from "react";
 
 export default function ProfileNavbar(props) {
-  const user = props.user;
-  console.log(user);
+  // const user = props.user;
 
   return (
     <div className="navbar profile-nav">

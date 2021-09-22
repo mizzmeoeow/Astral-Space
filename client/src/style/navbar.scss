@@ -6,26 +6,26 @@
   font-size: 30px;
   transform: translateX(-32px) translateY(-15px);
   @media (min-width: 250px) and (max-width: 290px) {
-    transform: translateX(-4rem) translateY(7rem);
+    transform: translateX(-10rem) translateY(7rem);
   }
   @media (min-width: 290px) and (max-width: 350px) {
-    transform: translateX(-4rem) translateY(7rem);
+    transform: translateX(-11rem) translateY(7rem);
   }
   @media (min-width: 350px) and (max-width: 400px) {
-    transform: translateX(-4rem) translateY(8rem);
+    transform: translateX(-12rem) translateY(8rem);
   }
   @media (min-width: 400px) and (max-width: 490px) {
-    transform: translateX(-5rem) translateY(6rem);
+    transform: translateX(-13rem) translateY(8rem);
   }
 
   @media (min-width: 490px) and (max-width: 700px) {
-    transform: translateX(-3rem) translateY(6rem);
+    transform: translateX(-17rem) translateY(7rem);
   }
   @media (min-width: 700px) and (max-width: 1000px) {
-    transform: translateX(-2rem) translateY(6rem);
+    transform: translateX(-22rem) translateY(6rem);
   }
   @media (min-width: 1000px) and (max-width: 1200px) {
-    transform: translateX(-2rem) translateY(6rem);
+    transform: translateX(-30rem) translateY(6rem);
   }
 }
 
