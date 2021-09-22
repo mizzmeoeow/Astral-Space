@@ -11,9 +11,9 @@ export default function ProfileNavbar(props) {
       ) : (
         <h1>not set up for some reason</h1>
       )} */}
-      <a href="/connect" className="navbar-links profile-links">
+      {/* <a href="/connect" className="navbar-links">
         Connect
-      </a>
+      </a> */}
     </div>
   );
 }

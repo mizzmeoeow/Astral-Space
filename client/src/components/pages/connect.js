@@ -14,13 +14,13 @@ class Connect extends Component {
 
   render() {
     const { user } = this.props.auth;
-    console.log(user.username);
+    // console.log(user.username);
 
     return (
       <div className="connect-nav">
         <ConnectHeader />
         <h4 className="greeting connect-greeting">
-          <b>Would you like to connect with someone,</b> {user.username}?
+          <b>Would you like to connect with someone, today?</b>
         </h4>
         <SearchPage user={user} />
         <ConnectSpace user={user} />

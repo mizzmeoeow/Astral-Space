@@ -58,15 +58,19 @@ class Dashboard extends Component {
             }}
           />
         </div>
-
+        <div className="navbar profile-nav">
+          <a
+            href="/"
+            onClick={this.onLogoutClick}
+            className="navbar-links logout"
+          >
+            Logout
+          </a>
+          <a href="/connect" className="navbar-links connect-dashboard">
+            Connect
+          </a>
+        </div>
         <ProfileNavbar user={user} />
-        <a
-          href="/"
-          onClick={this.onLogoutClick}
-          className="navbar-links profile-links"
-        >
-          Logout
-        </a>
         <ProfileSpace user={user} />
         <ProfileFooter />
       </div>

@@ -30,7 +30,7 @@ export const loginUser = (userData) => (dispatch) => {
     .post("auth/login", userData)
     .then((res) => {
       const { token } = res.data;
-      sessionStorage.setItem("userData", token);
+      sessionStorage.setItem("jwtToken", token);
       sessionStorage.setItem("user", res.data);
 
       console.log(res.data);
@@ -43,17 +43,12 @@ export const loginUser = (userData) => (dispatch) => {
       // sessionStorage.setItem("userData", JSON.stringify(decoded));
 
       // Set current user
-      dispatch(
-        setCurrentUser({
-          id: decoded._id,
-          username: decoded.username,
-        })
-      );
+      dispatch(setCurrentUser(decoded));
     })
     .catch((err) =>
       dispatch({
         type: GET_ERRORS,
-        payload: err.response,
+        payload: err,
       })
     );
 };

@@ -228,7 +228,7 @@
 
 .connect-greeting {
   @media (min-width: 200px) and (max-width: 430px) {
-    transform: translateY(15px);
+    transform: translateY(15px) translateX(2rem);
     width: 81vw;
   }
   @media (min-width: 500px) and (max-width: 550px) {
@@ -238,17 +238,22 @@
     transform: translateY(-5px);
   }
 }
+
 .home-connect {
+  transform: translateY(-4rem);
   @media (min-width: 200px) and (max-width: 300px) {
-    transform: translateX(290px) translateY(-40px);
+    transform: translateX(20rem) translateY(-40px);
     width: 80vw;
   }
   @media (min-width: 300px) and (max-width: 350px) {
-    transform: translateX(340px) translateY(-10px);
+    transform: translateX(22rem) translateY(-13px);
     width: 80vw;
   }
-  @media (min-width: 350px) and (max-width: 430px) {
-    transform: translateY(-15px) translateX(240px);
+  @media (min-width: 350px) and (max-width: 370px) {
+    transform: translateY(-10rem) translateX(2rem);
+  }
+  @media (min-width: 370px) and (max-width: 430px) {
+    transform: translateY(-3rem) translateX(15rem);
   }
   @media (min-width: 500px) and (max-width: 550px) {
     transform: translateY(-15px) translateX(300px);

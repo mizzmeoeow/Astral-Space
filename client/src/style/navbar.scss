@@ -6,32 +6,37 @@
   font-size: 30px;
   transform: translateX(-32px) translateY(-15px);
   @media (min-width: 250px) and (max-width: 290px) {
-    transform: translateX(-190px) translateY(55px);
+    transform: translateX(-4rem) translateY(7rem);
   }
   @media (min-width: 290px) and (max-width: 350px) {
-    transform: translateX(-220px) translateY(35px);
+    transform: translateX(-4rem) translateY(7rem);
   }
   @media (min-width: 350px) and (max-width: 400px) {
-    transform: translateX(-260px) translateY(34px);
+    transform: translateX(-4rem) translateY(8rem);
   }
   @media (min-width: 400px) and (max-width: 490px) {
-    transform: translateX(-270px) translateY(34px);
+    transform: translateX(-5rem) translateY(6rem);
   }
 
   @media (min-width: 490px) and (max-width: 700px) {
-    transform: translateX(-390px) translateY(34px);
+    transform: translateX(-3rem) translateY(6rem);
   }
   @media (min-width: 700px) and (max-width: 1000px) {
-    transform: translateX(-630px) translateY(40px);
+    transform: translateX(-2rem) translateY(6rem);
   }
   @media (min-width: 1000px) and (max-width: 1200px) {
-    transform: translateX(-890px) translateY(40px);
+    transform: translateX(-2rem) translateY(6rem);
   }
 }
 
 .navbar-links {
+  color: white;
   text-decoration: none;
-  color: rgb(100, 6, 88);
+
+  @media (max-width: 615px) {
+    transform: translateY(-25px) translateX(-20px);
+    width: 7vw;
+  }
 }
 
 .navbar-links:hover {
@@ -44,13 +49,4 @@
 
 .profile {
   color: white;
-}
-
-.profile-links {
-  color: white;
-  transform: translateY(-30px) translateX(110px);
-  @media (max-width: 615px) {
-    transform: translateY(-25px) translateX(-20px);
-    width: 7vw;
-  }
 }
