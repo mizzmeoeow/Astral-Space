@@ -3,6 +3,10 @@
   margin: 0px 25px 40px 25px;
   display: flex;
   flex-direction: column;
+  // @media (min-width: 200px) and (max-width: 300px) {
+  //   transform: translateX(16rem) translateY(-6rem);
+  //   width: 80vw;
+  // }
 }
 
 .postImg {
@@ -54,12 +58,15 @@
   text-align: center;
   margin-left: 200px;
   margin-top: 10px;
+  @media (min-width: 300px) and (max-width: 500px) {
+    margin-left: 1px;
+  }
 }
 
 .postDesc {
   font-family: "Varela Round", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 2rem;
   line-height: 24px;
   color: white;
   margin-top: 15px;

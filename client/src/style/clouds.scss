@@ -5,10 +5,10 @@
   overflow: hidden;
 
   @media (min-width: 200px) and (max-width: 360px) {
-    min-height: 91vh;
+    min-height: 88vh;
   }
   @media (min-width: 360px) and (max-width: 370px) {
-    min-height: 96vh;
+    min-height: 97vh;
   }
   @media (min-width: 370px) and (max-width: 400px) {
     min-height: 92vh;
@@ -21,16 +21,19 @@
     min-height: 92vh;
   }
   @media (max-width: 420px) and (min-height: 700px) {
-    min-height: 95.5vh;
+    min-height: 93.5vh;
   }
   @media (min-width: 413px) and (min-height: 800px) {
     min-height: 94vh;
   }
   @media (min-width: 500px) and (max-width: 1220px) {
-    min-height: 93vh;
+    min-height: 91vh;
   }
   @media (min-width: 1220px) and (max-width: 1400px) {
     min-height: 85vh;
+  }
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    height: 102vh;
   }
 }
 .cloud {
