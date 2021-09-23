@@ -61,6 +61,7 @@
 }
 
 .cat-nav {
+  transform: translateY(-4rem);
   @media (min-width: 270px) and (max-width: 300px) {
     transform: translateX(3rem) translateY(-80px);
   }
@@ -88,6 +89,9 @@
   }
   @media (min-width: 1020px) and (max-width: 1220px) {
     transform: translateX(1rem) translateY(-30px);
+  }
+  @media (min-width: 1520px) and (max-width: 1920px) {
+    transform: translateY(-4rem);
   }
 }
 
@@ -185,7 +189,7 @@
       width: 10rem;
     }
     &__description {
-      width: 8rem;
+      width: 7rem;
       text-decoration: none;
     }
 

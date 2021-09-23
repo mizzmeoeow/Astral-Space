@@ -37,6 +37,7 @@
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 900;
+  width: 4rem;
   margin-top: 15px;
   cursor: pointer;
   @media (max-width: 615px) {
@@ -55,8 +56,8 @@
 
 .desc-container {
   width: 50vw;
-  text-align: center;
-  margin-left: 200px;
+  text-align: left;
+  margin-left: 10rem;
   margin-top: 10px;
   @media (min-width: 300px) and (max-width: 500px) {
     margin-left: 1px;

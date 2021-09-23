@@ -39,8 +39,14 @@
   @media (min-width: 1000px) and (max-width: 1220px) {
     height: 15vh;
   }
+  @media (min-width: 1220px) and (max-width: 1400px) {
+    height: 15vh;
+  }
   @media (min-width: 1400px) and (max-width: 1600px) {
     height: 10vh;
+  }
+  @media (min-width: 1600px) and (max-width: 2000px) {
+    height: 12vh;
   }
 }
 
@@ -307,6 +313,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 13rem;
 }
 
 .postCat {
