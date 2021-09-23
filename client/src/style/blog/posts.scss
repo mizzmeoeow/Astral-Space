@@ -117,6 +117,12 @@
 .singlePostWrapper {
   padding: 30px;
   padding-right: 0;
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translateY(3rem);
+  }
+  @media (min-width: 300px) and (max-width: 420px) {
+    transform: translateY(3rem);
+  }
 }
 
 .singlePostImg {
@@ -173,13 +179,32 @@
   font-size: 16px;
   color: #b535fc;
   font-family: "Old Standard TT", serif;
+  @media (min-width: 200px) and (max-width: 920px) {
+    flex-direction: column;
+  }
+  @media (min-width: 200px) and (max-width: 299px) {
+    transform: translateX(5rem);
+  }
+  @media (min-width: 300px) and (max-width: 320px) {
+    transform: translateX(6rem);
+  }
+  @media (min-width: 321px) and (max-width: 420px) {
+    transform: translateX(7rem);
+  }
+  @media (min-width: 421px) and (max-width: 700px) {
+    transform: translateX(12rem);
+  }
+  @media (min-width: 700px) and (max-width: 820px) {
+    transform: translateX(19rem) translateY(2rem);
+  }
 }
 
 .singlePostDesc {
   color: white;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 45px;
   font-family: "Old Standard TT", serif;
+  width: 50vw;
 }
 
 .singlePostDesc::first-letter {

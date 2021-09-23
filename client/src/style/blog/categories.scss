@@ -364,3 +364,22 @@
     width: 25vw;
   }
 }
+
+.post-nav {
+  @media (min-width: 200px) and (max-width: 300px) {
+    transform: translateX(9rem) translateY(-7rem);
+  }
+  @media (min-width: 300px) and (max-width: 420px) {
+    transform: translateX(10rem) translateY(-8rem);
+  }
+  @media (min-width: 500px) and (max-width: 700px) {
+    transform: translateX(15rem) translateY(-9rem);
+  }
+  @media (min-width: 700px) and (max-width: 1200px) {
+    transform: translateX(18rem) translateY(-10rem);
+  }
+}
+
+.edit-post {
+  // transform: translateX(-2rem);
+}

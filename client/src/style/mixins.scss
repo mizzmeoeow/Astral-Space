@@ -22,14 +22,14 @@
     transform: translateX(200px);
     @media (min-width: 200px) and (max-width: 305px) {
       transform: translateX(1rem);
-      width: 90vw;
+      width: 65vw;
     }
     @media (min-width: 300px) and (max-width: 500px) {
       transform: translateX(20px);
-      width: 90vw;
+      width: 82vw;
     }
     @media (min-width: 500px) and (max-width: 615px) {
-      width: 90vw;
+      width: 80vw;
       transform: translateX(2rem);
     }
     @media (min-width: 615px) and (max-width: 700px) {
