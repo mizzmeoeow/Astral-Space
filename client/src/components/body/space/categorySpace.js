@@ -11,7 +11,7 @@ class CategorySpace extends Component {
 
     return (
       <div
-        className="background dash-bg"
+        className="background cat-background"
         style={{
           backgroundImage: `url(${background})`,
         }}

@@ -16,50 +16,28 @@
 
 .dash-bg {
   min-height: 75vh;
-  // @media (min-width: 200px) and (max-width: 300px) {
-  //   min-height: 88vh;
-  // }
-  // @media (min-width: 300px) and (max-width: 360px) {
-  //   min-height: 86vh;
-  // }
-  // @media (min-width: 360px) and (max-width: 370px) {
-  //   min-height: 87.3vh;
-  // }
-  // @media (min-width: 370px) and (max-width: 400px) {
-  //   min-height: 88vh;
-  // }
-
-  // @media (min-width: 370px) and (min-height: 800px) {
-  //   min-height: 93vh;
-  // }
-  // @media (min-width: 400px) and (max-width: 500px) {
-  //   min-height: 92vh;
-  // }
-  // @media (max-width: 420px) and (min-height: 700px) {
-  //   min-height: 89vh;
-  // }
-  // @media (min-width: 413px) and (min-height: 800px) {
-  //   min-height: 94vh;
-  // }
-  // @media (min-width: 500px) and (max-width: 600px) {
-  //   min-height: 85.5vh;
-  // }
-  // @media (min-width: 600px) and (max-width: 1000px) {
-  //   min-height: 89vh;
-  // }
-  // @media (min-width: 1000px) and (max-width: 1200px) {
-  //   min-height: 84vh;
-  // }
-  // @media (min-width: 1220px) and (max-width: 1360px) {
-  //   min-height: 85vh;
-  // }
-  // @media (min-width: 1360px) and (max-width: 1400px) {
-  //   min-height: 81.6vh;
-  // }
-  // @media (min-width: 1400px) and (max-width: 1600px) {
-  //   height: 102vh;
-  // }
-  // @media (min-width: 1900px) and (max-width: 2000px) {
-  //   height: 97vh;
-  // }
+  @media (min-width: 200px) and (max-width: 420px) {
+    min-height: 85vh;
+  }
+  @media (max-width: 420px) and (min-height: 850px) {
+    min-height: 88vh;
+  }
+  @media (min-width: 370px) and (max-width: 400px) {
+    min-height: 87vh;
+  }
+  @media (min-width: 400px) and (min-height: 700px) {
+    min-height: 85vh;
+  }
+  @media (min-width: 500px) and (max-width: 600px) {
+    min-height: 85vh;
+  }
+  @media (min-width: 700px) and (max-width: 1200px) {
+    min-height: 89vh;
+  }
+  @media (min-width: 1400px) and (max-width: 1600px) {
+    min-height: 83vh;
+  }
+  @media (min-width: 1900px) and (max-width: 2000px) {
+    min-height: 86vh;
+  }
 }
