@@ -27,7 +27,7 @@ class Dashboard extends Component {
     // console.log(user);
 
     return (
-      <div className="profile-page header">
+      <div className="profile-page header dash-bg">
         <div>
           <TypingEffect
             messages={[

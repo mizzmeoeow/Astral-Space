@@ -21,6 +21,9 @@
   @media (min-width: 900px) and (max-width: 1300px) {
     transform: translateX(23rem) translateY(8rem);
   }
+  @media (min-width: 1900px) and (max-width: 2000px) {
+    transform: translateX(50rem) translateY(9rem);
+  }
 
   grid-template-rows:
     [signin-s] 64px [signin-e register-s] 64px [register-e shop-s] minmax(

@@ -5,7 +5,10 @@ class SignInClouds extends Component {
   render() {
     return (
       <div className="clouds-svg">
-        <svg className="background" xmlnsXlink="http://www.w3.org/2000/svg">
+        <svg
+          className="background sign-in-background"
+          xmlnsXlink="http://www.w3.org/2000/svg"
+        >
           <filter id="filter">
             <feTurbulence
               type="fractalNoise"

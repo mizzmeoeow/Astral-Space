@@ -19,7 +19,7 @@
 
   p {
     grid-row: p-s/p-e;
-    transform: translateX(200px);
+    transform: translateX(20rem);
     @media (min-width: 200px) and (max-width: 305px) {
       transform: translateX(1rem);
       width: 65vw;
@@ -36,10 +36,11 @@
       transform: translateX(5rem);
       width: 80vw;
     }
-    @media (min-width: 700px) and (max-width: 815px) {
-      transform: translateX(10rem);
+    @media (min-width: 700px) and (max-width: 1200px) {
       width: 70vw;
+      transform: translateX(7rem);
     }
+
     @media (min-width: 1200px) and (max-width: 1400px) {
       transform: translateX(20rem);
     }
