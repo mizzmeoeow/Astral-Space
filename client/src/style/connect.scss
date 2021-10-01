@@ -69,7 +69,7 @@
     transform: translateX(3rem) translateY(-100px);
   }
   @media (min-width: 330px) and (max-width: 420px) {
-    transform: translateX(3rem) translateY(-90px);
+    transform: translateX(3rem) translateY(-80px);
   }
   @media (min-width: 420px) and (max-width: 490px) {
     transform: translateX(3rem) translateY(-5rem);
@@ -233,10 +233,10 @@
     height: 125vh;
   }
   @media (min-width: 700px) and (max-width: 1000px) {
-    height: 108vh;
+    min-height: 88vh;
   }
   @media (min-width: 1000px) and (max-width: 1200px) {
-    height: 70vh;
+    min-height: 69vh;
   }
 }
 

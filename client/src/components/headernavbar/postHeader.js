@@ -5,7 +5,7 @@ class PostHeader extends Component {
     return (
       <div className="category-header">
         <p className="connect-header edit-post">View or edit a Post</p>
-        <div className="navbar">
+        <div className="navbar post-navbar">
           <a href="/dashboard" className="nav-connect cat-nav post-nav ">
             Home Space
           </a>

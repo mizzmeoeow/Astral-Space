@@ -363,7 +363,7 @@
     min-height: 81vh;
   }
   @media (min-width: 450px) and (max-width: 702px) {
-    min-height: 84vh;
+    min-height: 77vh;
   }
   @media (min-width: 400px) and (min-height: 800px) {
     min-height: 81vh;
@@ -373,6 +373,9 @@
   }
   @media (min-width: 850px) and (max-width: 1150px) {
     min-height: 84vh;
+  }
+  @media (min-width: 1150px) and (max-width: 1400px) {
+    min-height: 74vh;
   }
   @media (min-width: 1400px) and (max-width: 1600px) {
     min-height: 83vh;
@@ -409,16 +412,25 @@
     transform: translateX(9rem) translateY(-7rem);
   }
   @media (min-width: 300px) and (max-width: 420px) {
-    transform: translateX(10rem) translateY(-8rem);
+    transform: translateX(12rem) translateY(-7rem);
   }
   @media (min-width: 500px) and (max-width: 700px) {
     transform: translateX(15rem) translateY(-9rem);
   }
-  @media (min-width: 700px) and (max-width: 1200px) {
-    transform: translateX(18rem) translateY(-10rem);
+  @media (min-width: 700px) and (max-width: 1000px) {
+    transform: translateX(22rem) translateY(-7rem);
+  }
+  @media (min-width: 1000px) and (max-width: 1200px) {
+    transform: translateX(30rem) translateY(-4rem);
   }
 }
 
 .edit-post {
   // transform: translateX(-2rem);
+}
+
+.post-background {
+  @media (min-width: 300px) and (max-width: 400px) {
+    min-height: 100vh;
+  }
 }

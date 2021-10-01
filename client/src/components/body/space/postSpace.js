@@ -10,7 +10,7 @@ class PostSpace extends Component {
     const { user } = this.props.auth;
     return (
       <div
-        className="background"
+        className="background cat-background post-background"
         style={{
           backgroundImage: `url(${background})`,
         }}
