@@ -84,15 +84,17 @@ function ContactForm(props) {
           required
         />
       </div>
-
-      <button type="submit" className="login-btn contact-btn">
-        Launch
-      </button>
-      <a href="/dashboard">
-        <button type="button" className="back-btn contact-btn">
-          Go Back
+      <div>
+        <button type="submit" className="login-btn contact-btn">
+          Launch
         </button>
-      </a>
+        <a href="/dashboard">
+          <button type="button" className="back-btn contact-btn">
+            Go Back
+          </button>
+        </a>
+      </div>
+
       <div className="row">{result ? <Result /> : null}</div>
     </form>
   );

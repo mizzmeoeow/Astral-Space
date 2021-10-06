@@ -6,9 +6,10 @@ import Footer from "../footer/footer";
 class Contact extends Component {
   render() {
     return (
-      <div className="contact header">
-        <p className="sign-in-page">Contact</p>
-
+      <div>
+        <div className="header">
+          <p className="sign-in-page">Contact</p>
+        </div>
         <ContactClouds />
         <Footer />
       </div>

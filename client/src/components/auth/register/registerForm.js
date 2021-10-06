@@ -114,11 +114,12 @@ function RegisterForm() {
   }
 
   return (
-    <form className="sign-in-form" onSubmit={handleSubmit}>
-      <div className="sign-in-form register">
+    <form className="register_form" onSubmit={handleSubmit}>
+      <div className="register-form">
         {err && showErrMsg(err)}
         {success && showSuccessMsg(success)}
         <label htmlFor="username">Username</label>
+        <br />
         <input
           autoComplete="off"
           type="text"
@@ -129,8 +130,9 @@ function RegisterForm() {
           onChange={handleChangeInput}
         />
       </div>
-      <div className="sign-in-form">
+      <div className="register-form">
         <label htmlFor="email">Email</label>
+        <br />
         <input
           autoComplete="off"
           type="text"
@@ -141,8 +143,9 @@ function RegisterForm() {
           onChange={handleChangeInput}
         />
       </div>
-      <div className="sign-in-form">
+      <div className="register-form">
         <label htmlFor="password">Password</label>
+        <br />
         <input
           autoComplete="off"
           type="password"
@@ -153,8 +156,9 @@ function RegisterForm() {
           onChange={handleChangeInput}
         />
       </div>
-      <div className="sign-in-form">
+      <div className="register-form">
         <label htmlFor="confirm">Confirm Password</label>
+        <br />
         <input
           autoComplete="off"
           type="password"
@@ -165,8 +169,9 @@ function RegisterForm() {
           onChange={handleChangeInput}
         />
       </div>
-      <div className="sign-in-form birthday">
+      <div className="register-form birthday">
         <label htmlFor="birthday">Birthday</label>
+        <br />
         <input
           autoComplete="off"
           type="date"
@@ -179,8 +184,9 @@ function RegisterForm() {
           onChange={handleChangeInput}
         />
       </div>
-      <div className="sign-in-form">
+      <div className="register-form">
         <label htmlFor="question">What art field interests you?</label>
+        <br />
         <input
           autoComplete="off"
           type="question"
@@ -191,14 +197,16 @@ function RegisterForm() {
           onChange={handleChangeInput}
         />
       </div>
-      <button type="submit" className="login-btn register-btn">
-        Register
-      </button>
-      <a href="/">
-        <button type="button" className="login-btn register-btn">
-          Go Back
+      <div>
+        <button type="submit" className="login-btn register-btn">
+          Register
         </button>
-      </a>
+        <a href="/">
+          <button type="button" className="login-btn register-btn">
+            Go Back
+          </button>
+        </a>
+      </div>
     </form>
   );
 }

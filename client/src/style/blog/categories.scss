@@ -62,19 +62,15 @@
   object-fit: cover;
 
   @media (min-width: 200px) and (max-width: 290px) {
-    transform: translateX(-120px) translateY(80px);
     height: 30vh;
   }
   @media (min-width: 290px) and (max-width: 490px) {
-    transform: translateX(-120px) translateY(65px);
     height: 30vh;
   }
   @media (min-width: 490px) and (max-width: 690px) {
-    transform: translateX(-100px) translateY(55px);
     height: 30vh;
   }
   @media (min-width: 750px) and (max-width: 1290px) {
-    transform: translateX(-80px) translateY(90px);
     height: 30vh;
   }
 }
@@ -84,46 +80,8 @@
 // }
 
 .writeFormGroup {
-  margin-left: 150px;
   display: flex;
   align-items: center;
-
-  @media (min-width: 100px) and (max-width: 300px) {
-    transform: translateX(-9rem) translateY(6rem);
-  }
-  @media (min-width: 300px) and (max-width: 359px) {
-    transform: translateX(-9rem) translateY(8rem);
-  }
-  @media (min-width: 360px) and (max-width: 370px) {
-    transform: translateX(-9rem) translateY(10rem);
-  }
-  @media (min-width: 370px) and (max-width: 520px) {
-    transform: translateX(-9rem) translateY(8rem);
-  }
-  @media (min-width: 520px) and (max-width: 615px) {
-    transform: translateX(-8rem) translateY(8rem);
-  }
-  @media (min-width: 615px) and (max-width: 700px) {
-    transform: translateX(-6rem) translateY(8rem);
-  }
-  @media (min-width: 700px) and (max-width: 800px) {
-    transform: translateY(11rem) translateX(-4rem);
-  }
-  @media (min-width: 800px) and (max-width: 940px) {
-    transform: translateX(-1rem) translateY(11rem);
-  }
-  @media (min-width: 940px) and (max-width: 1200px) {
-    transform: translateX(-1rem) translateY(15rem);
-  }
-  @media (min-width: 1200px) and (max-width: 1400px) {
-    transform: translateX(2rem) translateY(2rem);
-  }
-  @media (min-width: 1400px) and (max-width: 1600px) {
-    transform: translateX(5rem) translateY(3rem);
-  }
-  @media (min-width: 1600px) and (max-width: 2000px) {
-    transform: translateX(12rem) translateY(10rem);
-  }
 }
 
 .writeIcon {
@@ -135,28 +93,6 @@
   font-size: 20px;
   color: #b535fc;
   cursor: pointer;
-  transform: translateX(65px);
-  @media (min-width: 100px) and (max-width: 290px) {
-    transform: translateX(-28px) translateY(90px);
-  }
-  @media (min-width: 290px) and (max-width: 330px) {
-    transform: translateX(-5px) translateY(70px);
-  }
-  @media (min-width: 330px) and (max-width: 400px) {
-    transform: translateX(5px) translateY(70px);
-  }
-  @media (min-width: 400px) and (max-width: 520px) {
-    transform: translateX(-18px) translateY(70px);
-  }
-  @media (min-width: 520px) and (max-width: 700px) {
-    transform: translateX(-5px) translateY(60px);
-  }
-  @media (min-width: 700px) and (max-width: 1000px) {
-    transform: translateX(-4rem) translateY(95px);
-  }
-  @media (min-width: 1000px) and (max-width: 1200px) {
-    transform: translateX(40px) translateY(90px);
-  }
 }
 
 .writeInput {
@@ -167,7 +103,6 @@
   width: 60vw;
   background: transparent;
   border: 2px solid lightgray;
-  transform: translateX(70px);
 }
 
 .writeTitle {
@@ -213,67 +148,10 @@
 }
 
 .writeSubmit {
-  position: absolute;
-  right: 18rem;
-  margin-top: -8px;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
-  @media (min-width: 100px) and (max-width: 300px) {
-    transform: translateX(12rem) translateY(8rem);
-  }
-  @media (min-width: 300px) and (max-width: 359px) {
-    transform: translateX(10.5rem) translateY(10rem);
-  }
-  @media (min-width: 360px) and (max-width: 370px) {
-    transform: translateX(10rem) translateY(12rem);
-  }
-  @media (min-width: 370px) and (max-width: 410px) {
-    transform: translateX(9rem) translateY(10rem);
-  }
-  @media (min-width: 410px) and (max-width: 489px) {
-    transform: translateX(8rem) translateY(10rem);
-  }
-  @media (min-width: 490px) and (max-width: 500px) {
-    transform: translateX(5rem) translateY(10rem);
-  }
-  @media (min-width: 500px) and (max-width: 615px) {
-    transform: translateX(4rem) translateY(10rem);
-  }
-  @media (min-width: 615px) and (max-width: 700px) {
-    transform: translateX(1rem) translateY(9rem);
-  }
-  @media (min-width: 700px) and (max-width: 800px) {
-    transform: translateX(-2rem) translateY(12rem);
-  }
-  @media (min-width: 800px) and (max-width: 1000px) {
-    transform: translateX(-6rem) translateY(12rem);
-  }
-  @media (min-width: 1000px) and (max-width: 1025px) {
-    transform: translateX(-10rem) translateY(17rem);
-  }
-  @media (min-width: 1025px) and (max-width: 1080px) {
-    transform: translateX(-11rem) translateY(16rem);
-  }
-  @media (min-width: 1080px) and (max-width: 1200px) {
-    transform: translateX(-10rem) translateY(11rem);
-  }
-  @media (min-width: 1200px) and (max-width: 1300px) {
-    transform: translateX(-15rem) translateY(4rem);
-  }
-  @media (min-width: 1300px) and (max-width: 1400px) {
-    transform: translateX(-23rem) translateY(4rem);
-  }
-  @media (min-width: 1400px) and (max-width: 1600px) {
-    transform: translateX(-27rem) translateY(5rem);
-  }
-  @media (min-width: 1600px) and (max-width: 1900px) {
-    transform: translateX(-30rem) translateY(12rem);
-  }
-  @media (min-width: 1900px) and (max-width: 2000px) {
-    transform: translateX(-38rem) translateY(12rem);
-  }
 }
 
 .writeSubmit:hover {

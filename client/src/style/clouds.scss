@@ -1,6 +1,6 @@
 .background {
   background-size: cover;
-  min-height: 100vh;
+  min-height: 91.2vh;
   width: 100vw;
   overflow: hidden;
 
@@ -11,47 +11,39 @@
     min-height: 86vh;
   }
   @media (min-width: 360px) and (max-width: 370px) {
-    min-height: 87.3vh;
+    min-height: 92vh;
   }
   @media (min-width: 370px) and (max-width: 400px) {
-    min-height: 88vh;
+    min-height: 91vh;
   }
 
   // @media (min-width: 370px) and (min-height: 800px) {
   //   min-height: 93vh;
   // }
   @media (min-width: 400px) and (max-width: 500px) {
-    min-height: 92vh;
+    min-height: 93vh;
   }
   @media (max-width: 420px) and (min-height: 700px) {
-    min-height: 91vh;
+    min-height: 93vh;
   }
   // @media (min-width: 413px) and (min-height: 800px) {
   //   min-height: 94vh;
   // }
   @media (min-width: 500px) and (max-width: 600px) {
-    min-height: 89vh;
+    min-height: 95vh;
   }
   @media (min-width: 600px) and (max-width: 1000px) {
-    min-height: 86vh;
+    min-height: 95vh;
   }
-  @media (min-width: 1000px) and (max-width: 1200px) {
-    min-height: 84vh;
-  }
-  @media (min-width: 1220px) and (max-width: 1360px) {
-    min-height: 85vh;
-  }
-  @media (min-width: 1360px) and (max-width: 1400px) {
-    min-height: 81.6vh;
-  }
+
   @media (min-width: 1360px) and (min-height: 750px) {
     min-height: 86vh;
   }
   @media (min-width: 1400px) and (max-width: 1600px) {
-    min-height: 102vh;
+    min-height: 95vh;
   }
   @media (min-width: 1900px) and (max-width: 2000px) {
-    min-height: 90vh;
+    min-height: 95vh;
   }
 }
 .cloud {
@@ -88,51 +80,45 @@
   left: 130px;
 }
 
-.sign-in-background {
+.contact-background {
+  min-height: 91.2vh;
   @media (min-width: 200px) and (max-width: 300px) {
-    min-height: 90.5vh;
+    min-height: 92vh;
   }
   @media (min-width: 300px) and (max-width: 360px) {
-    min-height: 89vh;
-  }
-  @media (min-width: 360px) and (max-width: 370px) {
-    min-height: 90vh;
-  }
-  @media (min-width: 370px) and (max-width: 400px) {
     min-height: 91vh;
   }
+  @media (min-width: 360px) and (max-width: 370px) {
+    min-height: 92vh;
+  }
+  @media (min-width: 370px) and (max-width: 400px) {
+    min-height: 92vh;
+  }
 
-  // @media (min-width: 370px) and (min-height: 800px) {
-  //   min-height: 93vh;
-  // }
-  // @media (min-width: 400px) and (max-width: 500px) {
-  //   min-height: 92vh;
-  // }
   @media (max-width: 420px) and (min-height: 700px) {
     min-height: 93vh;
   }
-  // @media (min-width: 413px) and (min-height: 800px) {
-  //   min-height: 94vh;
-  // }
+
   @media (min-width: 500px) and (max-width: 600px) {
-    min-height: 91vh;
+    min-height: 93vh;
   }
   @media (min-width: 600px) and (max-width: 1000px) {
-    min-height: 92vh;
+    min-height: 95vh;
   }
   @media (min-width: 1000px) and (max-width: 1200px) {
-    min-height: 91.5vh;
+    min-height: 97vh;
   }
-  // @media (min-width: 1220px) and (max-width: 1360px) {
-  //   min-height: 85vh;
-  // }
   @media (min-width: 1360px) and (min-height: 750px) {
-    min-height: 85vh;
+    min-height: 92.5vh;
   }
   @media (min-width: 1400px) and (max-width: 1600px) {
-    min-height: 87vh;
+    min-height: 93vh;
   }
   @media (min-width: 1900px) and (max-width: 2000px) {
-    min-height: 89vh;
+    min-height: 95vh;
   }
+}
+
+.sign-in-background {
+  min-height: 89.6vh;
 }

@@ -17,9 +17,9 @@ class SignInClouds extends Component {
             />
             <feColorMatrix
               values="1 -1 0 0 0
-                               1 -1 0 0 0
-                               1 0 0 0 0
-                               -1 0 0 0 1"
+              1 -1 0 0 0
+              1 0 0 0 0
+              -1 0 0 0 1"
             />
             <feComponentTransfer>
               <feFuncR
@@ -37,13 +37,7 @@ class SignInClouds extends Component {
             </feComponentTransfer>
           </filter>
           <rect width="100%" height="100%" filter="url(#filter)" />
-          <foreignObject
-            className="sign-in-fo"
-            x="10"
-            y="180"
-            width="800"
-            height="300"
-          >
+          <foreignObject className="sign-in-fo" width="100%" height="100%">
             <SignInForm className="sign-in__form" />
           </foreignObject>
         </svg>

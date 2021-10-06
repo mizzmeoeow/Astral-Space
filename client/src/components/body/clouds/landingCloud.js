@@ -8,12 +8,12 @@ class LandingClouds extends Component {
           <filter id="filter">
             <feTurbulence
               type="fractalNoise"
-              baseFrequency="0.003"
+              baseFrequency="0.004"
               numOctaves="5"
             />
             <feColorMatrix
-              values="1 -1 0 0 0
-                               1 -1 0 0 0
+              values="0 -1 0 0 0
+                               0 -1 0 0 0
                                1 0 0 0 0
                                -1 0 0 0 1"
             />
@@ -33,14 +33,19 @@ class LandingClouds extends Component {
             </feComponentTransfer>
           </filter>
           <rect width="100%" height="100%" filter="url(#filter)" />
-          <foreignObject x="100" y="200" width="900" height="250">
+          <foreignObject width="100%" height="100%">
             <div className="cloud-svg-landing">
-              <a href="/login" className="cloud-svg-landing__sign-in">
-                Login
-              </a>
-              <a href="/register" className="cloud-svg-landing__register">
-                Register
-              </a>
+              <div className="landing-div">
+                <a href="/login" className="cloud-svg-landing__sign-in">
+                  Login
+                </a>
+              </div>
+              <div className="landing-div">
+                <a href="/register" className="cloud-svg-landing__register">
+                  Register
+                </a>
+              </div>
+
               {/* <a href="/shop" className="cloud-svg-landing__shop-as-guest">
                 Shop as Guest
               </a> */}

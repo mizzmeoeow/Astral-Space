@@ -53,13 +53,7 @@ class RegisterClouds extends Component {
             </feComponentTransfer>
           </filter>
           <rect width="100%" height="100%" filter="url(#filter)" />
-          <foreignObject
-            className="register-fo"
-            x="300"
-            y="20"
-            width="570"
-            height="500"
-          >
+          <foreignObject className="register-fo" width="100%" height="100%">
             <RegisterForm
               handleSuccessfulAuth={this.handleSuccessfulAuth}
               handleUnsuccessfulAuth={this.handleUnsuccessfulAuth}

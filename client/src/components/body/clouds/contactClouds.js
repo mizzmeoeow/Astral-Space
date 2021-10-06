@@ -7,7 +7,7 @@ class ContactClouds extends Component {
     return (
       <div className="clouds-svg">
         <svg
-          className="background sign-in-background"
+          className="background contact-background"
           xmlnsXlink="http://www.w3.org/2000/svg"
         >
           <filter id="filter">
@@ -17,10 +17,10 @@ class ContactClouds extends Component {
               numOctaves="5"
             />
             <feColorMatrix
-              values="1 -1 0 0 0
-                               1 -1 0 0 0
-                               1 0 0 0 0
-                               -1 0 0 0 1"
+              values="0 -1 0 0 0
+              0 -1 0 0 0
+              1 0 0 0 0
+              -1 0 0 0 1"
             />
             <feComponentTransfer>
               <feFuncR
@@ -38,7 +38,7 @@ class ContactClouds extends Component {
             </feComponentTransfer>
           </filter>
           <rect width="100%" height="100%" filter="url(#filter)" />
-          <foreignObject x="-200" y="100" width="1500" height="1050">
+          <foreignObject width="100%" height="100%">
             <ContactForm />
           </foreignObject>
         </svg>

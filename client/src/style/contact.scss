@@ -1,64 +1,45 @@
 .contact-form {
-  transform: translateX(-32rem);
-  @media (max-width: 615px) {
-    font-size: 10px;
+  display: grid;
+
+  justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+  @media (min-width: 200px) and (max-width: 615px) {
+    margin-top: 25%;
   }
-  @media (min-width: 200px) and (max-width: 305px) {
-    transform: translateX(-1100px) translateY(30px);
-    width: 40vw;
+
+  @media (min-width: 700px) and (max-width: 1205px) {
+    margin-top: 32%;
   }
-  @media (min-width: 305px) and (max-width: 355px) {
-    transform: translateX(-1000px);
-  }
-  @media (min-width: 355px) and (max-width: 415px) {
-    transform: translateX(-61rem);
-  }
-  @media (min-width: 370px) and (max-width: 415px) {
-    transform: translateX(-60rem) translateY(4rem);
-  }
-  @media (min-width: 500px) and (max-width: 605px) {
-    transform: translateX(-900px) translateY(80px);
-  }
-  @media (min-width: 700px) and (max-width: 805px) {
-    transform: translateX(-52rem) translateY(12rem);
-  }
-  @media (min-width: 805px) and (max-width: 1205px) {
-    transform: translateX(-45rem) translateY(20rem);
-  }
-  @media (min-width: 1600px) and (max-width: 2000px) {
-    transform: translateX(-18rem) translateY(10rem);
+  @media (min-width: 1900px) and (max-width: 2005px) {
+    margin-top: 10%;
   }
 
   .email {
-    transform: translateX(100px);
-    @media (max-width: 615px) {
-      transform: translateX(0);
-    }
+    // transform: translateX(100px);
+    // @media (max-width: 615px) {
+    //   transform: translateX(0);
+    // }
   }
 
   .full-name {
-    transform: translateX(100px);
-    @media (max-width: 615px) {
-      transform: translateX(0);
-    }
+    // transform: translateX(100px);
+    // @media (max-width: 615px) {
+    //   transform: translateX(0);
+    // }
   }
 
   .contact-btn {
-    transform: translateX(8rem);
-    @media (max-width: 615px) {
-      transform: translateX(0);
-    }
+    // transform: translateX(8rem);
+    // @media (max-width: 615px) {
+    //   transform: translateX(0);
+    // }
   }
 }
 
 .help {
-  transform: translateX(80px);
-  @media (max-width: 615px) {
-    transform: translateX(10px);
-  }
   @media (min-width: 200px) and (max-width: 305px) {
     width: 85vw;
-    transform: translateX(5px);
   }
 }
 
@@ -67,20 +48,14 @@ textarea {
 }
 
 .successful-message {
+  width: 90vw;
   font-size: 20px;
-  // float: left;
-  transform: translateX(-110px) translateY(60px);
+  align-self: center;
   @media (min-width: 100px) and (max-width: 305px) {
-    font-size: 12px;
   }
-  @media (min-width: 200px) and (max-width: 359px) {
-    transform: translateX(-70px) translateY(10px);
-    width: 140px;
-    font-size: 12px;
-  }
-  @media (min-width: 360px) and (max-width: 615px) {
-    transform: translateX(110px) translateY(60px);
-    width: 140px;
-    font-size: 12px;
-  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
 }
