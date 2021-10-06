@@ -17,7 +17,7 @@
 .dash-bg {
   min-height: 75vh;
   @media (min-width: 200px) and (max-width: 420px) {
-    min-height: 85vh;
+    min-height: 74vh;
   }
   @media (max-width: 420px) and (min-height: 850px) {
     min-height: 88vh;
@@ -29,10 +29,10 @@
     min-height: 85vh;
   }
   @media (min-width: 500px) and (max-width: 600px) {
-    min-height: 85vh;
+    min-height: 64vh;
   }
   @media (min-width: 700px) and (max-width: 1200px) {
-    min-height: 89vh;
+    min-height: 85vh;
   }
   @media (min-width: 1400px) and (max-width: 1600px) {
     min-height: 83vh;
@@ -40,4 +40,8 @@
   @media (min-width: 1900px) and (max-width: 2000px) {
     min-height: 86vh;
   }
+}
+
+.profile-header {
+  text-align: center;
 }

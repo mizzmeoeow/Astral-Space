@@ -28,13 +28,13 @@ class Dashboard extends Component {
 
     return (
       <div className="profile-page header dash-bg">
-        <div>
+        <div className="profile-header">
           <TypingEffect
             messages={[
               "You have arrived to AstralServers.",
               "There are a few decisions to make today, as always.",
               "Please, do not leave any items when you exit.",
-              "Have a great stay. (^-^)/",
+              "Have a great stay.",
             ]}
             cursor="|"
             textRenderer={(text, renderedCursor, atIndex) => {

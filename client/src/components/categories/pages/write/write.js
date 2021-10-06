@@ -74,9 +74,11 @@ export default function Write(props) {
             onChange={(e) => setDesc(e.target.value)}
           />
         </div>
-        <button className="writeSubmit" type="submit">
-          Publish
-        </button>
+        <div className="writeSubmit-div">
+          <button className="writeSubmit" type="submit">
+            Publish
+          </button>
+        </div>
       </form>
     </div>
   );

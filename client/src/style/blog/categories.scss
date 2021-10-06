@@ -82,6 +82,7 @@
 .writeFormGroup {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .writeIcon {
@@ -109,7 +110,7 @@
   width: 60vw;
   border-radius: 10px;
   color: white;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 0.5rem;
   @media (min-width: 100px) and (max-width: 310px) {
     width: 37vw;
@@ -121,7 +122,7 @@
     width: 45vw;
   }
   @media (min-width: 360px) and (max-width: 370px) {
-    width: 51vw;
+    width: 59vw;
   }
   @media (min-width: 370px) and (max-width: 400px) {
     width: 52vw;
@@ -130,8 +131,9 @@
     width: 56.5vw;
   }
 
-  @media (min-width: 700px) and (max-width: 800px) {
+  @media (min-width: 700px) and (max-width: 1100px) {
     width: 60vw;
+    margin-top: 15%;
   }
 }
 
@@ -152,6 +154,9 @@
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+}
+.writeSubmit-div {
+  text-align: center;
 }
 
 .writeSubmit:hover {

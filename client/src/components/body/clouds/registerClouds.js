@@ -22,7 +22,7 @@ class RegisterClouds extends Component {
     return (
       <div className="clouds-svg">
         <svg
-          className="background sign-in-background"
+          className="background register-background"
           xmlnsXlink="http://www.w3.org/2000/svg"
         >
           <filter id="filter">
