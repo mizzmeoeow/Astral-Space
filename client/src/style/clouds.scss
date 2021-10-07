@@ -124,4 +124,7 @@
 
 .sign-in-background {
   min-height: 89.6vh;
+  @media (min-width: 1900px) and (max-width: 2000px) {
+    min-height: 100vh;
+  }
 }
