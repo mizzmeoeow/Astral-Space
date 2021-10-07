@@ -20,7 +20,7 @@ class Connect extends Component {
       <div className="connect-nav">
         <ConnectHeader />
         <h4 className="greeting connect-greeting">
-          <b>Would you like to connect with someone, today?</b>
+          Would you like to connect with someone, today?
         </h4>
         <SearchPage user={user} />
         <ConnectSpace user={user} />

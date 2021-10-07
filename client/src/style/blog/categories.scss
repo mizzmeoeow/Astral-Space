@@ -274,7 +274,6 @@
   font-size: 18px;
   color: #999;
   margin-top: 15px;
-  transform: translateY(-24px) translateX(15px);
 }
 
 .postDesc {
@@ -291,20 +290,7 @@
 }
 
 .post-nav {
-  @media (min-width: 200px) and (max-width: 300px) {
-    transform: translateX(9rem) translateY(-7rem);
-  }
-  @media (min-width: 300px) and (max-width: 420px) {
-    transform: translateX(12rem) translateY(-7rem);
-  }
-  @media (min-width: 500px) and (max-width: 700px) {
-    transform: translateX(15rem) translateY(-9rem);
-  }
-  @media (min-width: 700px) and (max-width: 1000px) {
-    transform: translateX(22rem) translateY(-7rem);
-  }
-  @media (min-width: 1000px) and (max-width: 1200px) {
-    transform: translateX(30rem) translateY(-4rem);
+  @media (min-width: 350px) and (max-width: 370px) {
   }
 }
 

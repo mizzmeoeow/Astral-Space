@@ -58,6 +58,9 @@
 .nav-connect {
   text-decoration: none;
   color: white;
+  @media (min-width: 1300px) and (max-width: 1950px) {
+    margin-right: 1rem;
+  }
 }
 
 .cat-nav {
@@ -128,9 +131,9 @@
 }
 
 .search-results {
-  box-shadow: 0 0 5px 0 white;
+  box-shadow: 0 -4px 3px -3px white, 0 4px 3px -3px white;
   // border-radius: ;
-  min-width: 25rem;
+  min-width: 27vw;
   display: flex;
   min-height: 8rem;
   top: 0;
@@ -178,7 +181,7 @@
 }
 
 .connect-background {
-  min-height: 105vh;
+  min-height: 85vh;
   @media (min-width: 200px) and (max-width: 300px) {
     height: 121vh;
   }
@@ -210,7 +213,9 @@
 
 .connect-greeting {
   @media (min-width: 200px) and (max-width: 430px) {
-    width: 81vw;
+    width: 83vw;
+
+    text-align: center;
   }
 }
 
