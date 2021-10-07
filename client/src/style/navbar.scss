@@ -8,6 +8,9 @@
     align-items: center;
     margin-top: 8%;
   }
+  @media (min-width: 1300px) and (max-width: 1920px) {
+    margin-right: 4%;
+  }
 }
 
 .navbar-links {
