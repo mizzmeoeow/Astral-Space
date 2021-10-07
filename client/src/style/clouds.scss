@@ -45,6 +45,9 @@
   @media (min-width: 1900px) and (max-width: 2000px) {
     min-height: 95vh;
   }
+  @media (min-width: 1000px) and (min-height: 2000px) {
+    min-height: 98vh;
+  }
 }
 .cloud {
   margin-top: 150px;
